@@ -1,0 +1,272 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Northeast Ecosystem and Socioeconomic Profile data",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n\n[1] 2",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ATLANTICHALIBUT.html",
+    "href": "chapters/ATLANTICHALIBUT.html",
+    "title": "2  ATLANTICHALIBUT",
+    "section": "",
+    "text": "2.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>ATLANTICHALIBUT</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ATLANTICHALIBUT.html#socioeconomic-indicators",
+    "href": "chapters/ATLANTICHALIBUT.html#socioeconomic-indicators",
+    "title": "2  ATLANTICHALIBUT",
+    "section": "",
+    "text": "2.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n2.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n2.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n2.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n2.1.5 Average revenue per vessel ($USD2024)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>ATLANTICHALIBUT</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ATLANTICHALIBUT.html#ecosystem-indicators",
+    "href": "chapters/ATLANTICHALIBUT.html#ecosystem-indicators",
+    "title": "2  ATLANTICHALIBUT",
+    "section": "2.2 Ecosystem indicators",
+    "text": "2.2 Ecosystem indicators\nComing soon!",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>ATLANTICHALIBUT</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ATLANTICMACKEREL.html",
+    "href": "chapters/ATLANTICMACKEREL.html",
+    "title": "3  ATLANTICMACKEREL",
+    "section": "",
+    "text": "3.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>ATLANTICMACKEREL</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ATLANTICMACKEREL.html#socioeconomic-indicators",
+    "href": "chapters/ATLANTICMACKEREL.html#socioeconomic-indicators",
+    "title": "3  ATLANTICMACKEREL",
+    "section": "",
+    "text": "3.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n3.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n3.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n3.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n3.1.5 Average revenue per vessel ($USD2024)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>ATLANTICMACKEREL</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ATLANTICMACKEREL.html#ecosystem-indicators",
+    "href": "chapters/ATLANTICMACKEREL.html#ecosystem-indicators",
+    "title": "3  ATLANTICMACKEREL",
+    "section": "3.2 Ecosystem indicators",
+    "text": "3.2 Ecosystem indicators\nComing soon!",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>ATLANTICMACKEREL</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ATLANTICPOLLOCK.html",
+    "href": "chapters/ATLANTICPOLLOCK.html",
+    "title": "4  ATLANTICPOLLOCK",
+    "section": "",
+    "text": "4.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>ATLANTICPOLLOCK</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ATLANTICPOLLOCK.html#socioeconomic-indicators",
+    "href": "chapters/ATLANTICPOLLOCK.html#socioeconomic-indicators",
+    "title": "4  ATLANTICPOLLOCK",
+    "section": "",
+    "text": "4.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n4.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n4.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n4.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n4.1.5 Average revenue per vessel ($USD2024)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>ATLANTICPOLLOCK</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ATLANTICPOLLOCK.html#ecosystem-indicators",
+    "href": "chapters/ATLANTICPOLLOCK.html#ecosystem-indicators",
+    "title": "4  ATLANTICPOLLOCK",
+    "section": "4.2 Ecosystem indicators",
+    "text": "4.2 Ecosystem indicators\nComing soon!",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>ATLANTICPOLLOCK</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ATLANTICREDHAKE.html",
+    "href": "chapters/ATLANTICREDHAKE.html",
+    "title": "5  ATLANTICREDHAKE",
+    "section": "",
+    "text": "5.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>ATLANTICREDHAKE</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ATLANTICREDHAKE.html#socioeconomic-indicators",
+    "href": "chapters/ATLANTICREDHAKE.html#socioeconomic-indicators",
+    "title": "5  ATLANTICREDHAKE",
+    "section": "",
+    "text": "5.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n5.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n5.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n5.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n5.1.5 Average revenue per vessel ($USD2024)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>ATLANTICREDHAKE</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ATLANTICREDHAKE.html#ecosystem-indicators",
+    "href": "chapters/ATLANTICREDHAKE.html#ecosystem-indicators",
+    "title": "5  ATLANTICREDHAKE",
+    "section": "5.2 Ecosystem indicators",
+    "text": "5.2 Ecosystem indicators\nComing soon!",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>ATLANTICREDHAKE</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/LONGFINSQUID.html",
+    "href": "chapters/LONGFINSQUID.html",
+    "title": "6  LONGFINSQUID",
+    "section": "",
+    "text": "6.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>LONGFINSQUID</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/LONGFINSQUID.html#socioeconomic-indicators",
+    "href": "chapters/LONGFINSQUID.html#socioeconomic-indicators",
+    "title": "6  LONGFINSQUID",
+    "section": "",
+    "text": "6.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n6.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n6.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n6.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n6.1.5 Average revenue per vessel ($USD2024)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>LONGFINSQUID</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/LONGFINSQUID.html#ecosystem-indicators",
+    "href": "chapters/LONGFINSQUID.html#ecosystem-indicators",
+    "title": "6  LONGFINSQUID",
+    "section": "6.2 Ecosystem indicators",
+    "text": "6.2 Ecosystem indicators\nComing soon!",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>LONGFINSQUID</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/SEASCALLOP.html",
+    "href": "chapters/SEASCALLOP.html",
+    "title": "7  SEASCALLOP",
+    "section": "",
+    "text": "7.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>SEASCALLOP</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/SEASCALLOP.html#socioeconomic-indicators",
+    "href": "chapters/SEASCALLOP.html#socioeconomic-indicators",
+    "title": "7  SEASCALLOP",
+    "section": "",
+    "text": "7.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n7.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n7.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n7.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n7.1.5 Average revenue per vessel ($USD2024)",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>SEASCALLOP</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/SEASCALLOP.html#ecosystem-indicators",
+    "href": "chapters/SEASCALLOP.html#ecosystem-indicators",
+    "title": "7  SEASCALLOP",
+    "section": "7.2 Ecosystem indicators",
+    "text": "7.2 Ecosystem indicators\nComing soon!",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>SEASCALLOP</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/SILVERHAKE.html",
+    "href": "chapters/SILVERHAKE.html",
+    "title": "8  SILVERHAKE",
+    "section": "",
+    "text": "8.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>SILVERHAKE</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/SILVERHAKE.html#socioeconomic-indicators",
+    "href": "chapters/SILVERHAKE.html#socioeconomic-indicators",
+    "title": "8  SILVERHAKE",
+    "section": "",
+    "text": "8.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n8.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n8.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n8.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n8.1.5 Average revenue per vessel ($USD2024)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>SILVERHAKE</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/SILVERHAKE.html#ecosystem-indicators",
+    "href": "chapters/SILVERHAKE.html#ecosystem-indicators",
+    "title": "8  SILVERHAKE",
+    "section": "8.2 Ecosystem indicators",
+    "text": "8.2 Ecosystem indicators\nComing soon!",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>SILVERHAKE</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/WITCHFLOUNDER.html",
+    "href": "chapters/WITCHFLOUNDER.html",
+    "title": "9  WITCHFLOUNDER",
+    "section": "",
+    "text": "9.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>WITCHFLOUNDER</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/WITCHFLOUNDER.html#socioeconomic-indicators",
+    "href": "chapters/WITCHFLOUNDER.html#socioeconomic-indicators",
+    "title": "9  WITCHFLOUNDER",
+    "section": "",
+    "text": "9.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n9.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n9.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n9.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n9.1.5 Average revenue per vessel ($USD2024)",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>WITCHFLOUNDER</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/WITCHFLOUNDER.html#ecosystem-indicators",
+    "href": "chapters/WITCHFLOUNDER.html#ecosystem-indicators",
+    "title": "9  WITCHFLOUNDER",
+    "section": "9.2 Ecosystem indicators",
+    "text": "9.2 Ecosystem indicators\nComing soon!",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>WITCHFLOUNDER</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]

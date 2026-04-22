@@ -1,0 +1,39 @@
+project:
+  type: book
+
+book:
+  title: "Northeast Ecosystem and Socioeconomic Profile data"
+  author: 
+    name: "Northeast ESP Team"
+    affiliation: 
+      name: Northeast Fisheries Science Center    
+      url: https://www.fisheries.noaa.gov/new-england-mid-atlantic/science-data/ecosystem-and-socioeconomic-profiles-northeast-united-states
+  date: today
+  date-format: long
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - chapters/ATLANTICHALIBUT.qmd
+    - chapters/ATLANTICMACKEREL.qmd
+    - chapters/ATLANTICPOLLOCK.qmd
+    - chapters/ATLANTICREDHAKE.qmd
+    - chapters/LONGFINSQUID.qmd
+    - chapters/SEASCALLOP.qmd
+    - chapters/SILVERHAKE.qmd
+    - chapters/WITCHFLOUNDER.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    fig-width: 8
+    fig-height: 3
+  # pdf:
+  #   documentclass: scrreprt
+    
+execute:
+  echo: false

@@ -1,0 +1,71 @@
+
+
+# SILVERHAKE
+
+## Socioeconomic indicators
+
+```{r socioeco-data}
+url <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/2026_esp/data/intermediate/SILVERHAKE_Commercial_Indicators_Master.csv"
+data <- read.csv(url)
+```
+
+Get the data used to make the socioeconomic indicator plots [here](`r url`).
+
+### Average price per pound
+
+```{r}
+avgprice <- data |>
+  dplyr::filter(INDICATOR_NAME == "AVGPRICE_SILVERHAKE_2025_DOLlb") 
+
+NEesp2::plt_indicator(data = avgprice,
+                      ar = 1/4,
+                      include_trends = TRUE) 
+```
+
+### Total commercial landings (pounds)
+
+```{r}
+landings <- data |>
+  dplyr::filter(INDICATOR_NAME == "Commercial_SILVERHAKE_Landings_LBS") 
+
+NEesp2::plt_indicator(data = landings,
+                      ar = 1/4,
+                      include_trends = TRUE)
+```
+
+### Total commercial revenue
+
+```{r}
+totalrev <- data |>
+  dplyr::filter(INDICATOR_NAME == "TOTALANNUALREV_SILVERHAKE_2025Dols") 
+
+NEesp2::plt_indicator(data = totalrev,
+                      ar = 1/4,
+                      include_trends = TRUE)
+```
+
+### Number of commercial vessels
+
+```{r}
+nvessels <- data |>
+  dplyr::filter(INDICATOR_NAME == "N_Commercial_Vessels_Landing_SILVERHAKE") 
+
+NEesp2::plt_indicator(data = nvessels,
+                      ar = 1/4,
+                      include_trends = TRUE)
+```
+
+### Average revenue per vessel ($USD2024)
+
+```{r}
+vesselrev <- data |>
+  dplyr::filter(INDICATOR_NAME == "AVGVESREVperYr_SILVERHAKE_2025_DOLlb") 
+
+NEesp2::plt_indicator(data = vesselrev,
+                      ar = 1/4,
+                      include_trends = TRUE)
+```
+
+## Ecosystem indicators
+
+Coming soon!
