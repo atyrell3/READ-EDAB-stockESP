@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Northeast Ecosystem and Socioeconomic Profile data",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n\n[1] 2",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
     "crumbs": [
       "Preface"
     ]
@@ -44,7 +44,7 @@
     "href": "chapters/ATLANTICHALIBUT.html#ecosystem-indicators",
     "title": "2  ATLANTICHALIBUT",
     "section": "2.2 Ecosystem indicators",
-    "text": "2.2 Ecosystem indicators\nComing soon!",
+    "text": "2.2 Ecosystem indicators\n\n2.2.1 Monthly bottom temperature in stock area\nGet the data used to make the bottom temperature indicator plots here (pre-2021) and here (2021 and later).",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>ATLANTICHALIBUT</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "chapters/ATLANTICMACKEREL.html#ecosystem-indicators",
     "title": "3  ATLANTICMACKEREL",
     "section": "3.2 Ecosystem indicators",
-    "text": "3.2 Ecosystem indicators\nComing soon!",
+    "text": "3.2 Ecosystem indicators\n\n3.2.1 Monthly bottom temperature in stock area\n\n\nBottom temperature for this species hasn't been calculated yet.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>ATLANTICMACKEREL</span>"
     ]
@@ -104,7 +104,7 @@
     "href": "chapters/ATLANTICPOLLOCK.html#ecosystem-indicators",
     "title": "4  ATLANTICPOLLOCK",
     "section": "4.2 Ecosystem indicators",
-    "text": "4.2 Ecosystem indicators\nComing soon!",
+    "text": "4.2 Ecosystem indicators\n\n4.2.1 Monthly bottom temperature in stock area\nGet the data used to make the bottom temperature indicator plots here (pre-2021) and here (2021 and later).",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>ATLANTICPOLLOCK</span>"
     ]
@@ -134,7 +134,7 @@
     "href": "chapters/ATLANTICREDHAKE.html#ecosystem-indicators",
     "title": "5  ATLANTICREDHAKE",
     "section": "5.2 Ecosystem indicators",
-    "text": "5.2 Ecosystem indicators\nComing soon!",
+    "text": "5.2 Ecosystem indicators\n\n5.2.1 Monthly bottom temperature in stock area\nGet the data used to make the bottom temperature indicator plots here (pre-2021) and here (2021 and later).",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>ATLANTICREDHAKE</span>"
     ]
@@ -164,7 +164,7 @@
     "href": "chapters/LONGFINSQUID.html#ecosystem-indicators",
     "title": "6  LONGFINSQUID",
     "section": "6.2 Ecosystem indicators",
-    "text": "6.2 Ecosystem indicators\nComing soon!",
+    "text": "6.2 Ecosystem indicators\n\n6.2.1 Monthly bottom temperature in stock area\n\n\nBottom temperature for this species hasn't been calculated yet.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>LONGFINSQUID</span>"
     ]
@@ -194,7 +194,7 @@
     "href": "chapters/SEASCALLOP.html#ecosystem-indicators",
     "title": "7  SEASCALLOP",
     "section": "7.2 Ecosystem indicators",
-    "text": "7.2 Ecosystem indicators\nComing soon!",
+    "text": "7.2 Ecosystem indicators\n\n7.2.1 Monthly bottom temperature in stock area\n\n\nBottom temperature for this species hasn't been calculated yet.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>SEASCALLOP</span>"
     ]
@@ -224,7 +224,7 @@
     "href": "chapters/SILVERHAKE.html#ecosystem-indicators",
     "title": "8  SILVERHAKE",
     "section": "8.2 Ecosystem indicators",
-    "text": "8.2 Ecosystem indicators\nComing soon!",
+    "text": "8.2 Ecosystem indicators\n\n8.2.1 Monthly bottom temperature in stock area\nGet the data used to make the bottom temperature indicator plots here (pre-2021) and here (2021 and later).",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>SILVERHAKE</span>"
     ]
@@ -254,7 +254,7 @@
     "href": "chapters/WITCHFLOUNDER.html#ecosystem-indicators",
     "title": "9  WITCHFLOUNDER",
     "section": "9.2 Ecosystem indicators",
-    "text": "9.2 Ecosystem indicators\nComing soon!",
+    "text": "9.2 Ecosystem indicators\n\n9.2.1 Monthly bottom temperature in stock area\n\n\nBottom temperature for this species hasn't been calculated yet.",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>WITCHFLOUNDER</span>"
     ]

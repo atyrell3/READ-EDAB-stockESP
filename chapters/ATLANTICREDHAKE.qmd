@@ -68,4 +68,55 @@ NEesp2::plt_indicator(data = vesselrev,
 
 ## Ecosystem indicators
 
-Coming soon!
+### Monthly bottom temperature in stock area
+
+```{r bt-data}
+url1 <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/dev_AT/data-raw/2026/ATLANTICREDHAKE_hubert_bottomT.csv"
+url2 <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/dev_AT/data-raw/2026/ATLANTICREDHAKE_glorys_bottomT.csv"
+```
+
+```{r}
+check_url_exists <- function(url) {
+  tryCatch({
+    # Create a request and perform a HEAD pulse
+    resp <- httr2::request(url) |>
+      httr2::req_method("HEAD") |> 
+      httr2::req_perform()
+    
+    # Status code 200 means it exists and is accessible
+    return(httr2::resp_status(resp) == 200)
+    
+  }, error = function(e) {
+    # If the URL is broken or the server is down, return FALSE
+    return(FALSE)
+  })
+}
+```
+
+```{r, eval = check_url_exists(url1) & check_url_exists(url2), results = "asis"}
+cat("Get the data used to make the bottom temperature indicator plots [here (pre-2021)](", url1, ") and [here (2021 and later)](", url2, ").", sep = "")
+```
+
+```{r, eval = check_url_exists(url1) & check_url_exists(url2)}
+bt_data <- read.csv(url1) |>
+  dplyr::bind_rows(read.csv(url2)) |>
+  dplyr::group_by(AREA, MONTH, YEAR, INDICATOR_NAME, INDICATOR_UNITS) |>
+  dplyr::summarise(DATA_VALUE = mean(DATA_VALUE, na.rm = TRUE), .groups = "drop") |>
+  dplyr::mutate(INDICATOR_NAME = "monthly_bottomT")
+
+for(i in 1:12) {
+  print(
+    bt_data |>
+      dplyr::filter(MONTH == i) |>
+      NEesp2::plt_indicator(
+        ar = 1/4,
+        include_trends = TRUE
+      ) +
+      ggplot2::ggtitle(paste0("Monthly bottom temperature in stock area - ", month.abb[i]))
+  )
+}
+```
+
+```{r, eval = !(check_url_exists(url1) & check_url_exists(url2))}
+cat("Bottom temperature for this species hasn't been calculated yet.")
+```
