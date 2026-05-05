@@ -1,6 +1,37 @@
 
+```{r}
+check_url_exists <- function(url) {
+  tryCatch({
+    # Create a request and perform a HEAD pulse
+    resp <- httr2::request(url) |>
+      httr2::req_method("HEAD") |> 
+      httr2::req_perform()
+    
+    # Status code 200 means it exists and is accessible
+    return(httr2::resp_status(resp) == 200)
+    
+  }, error = function(e) {
+    # If the URL is broken or the server is down, return FALSE
+    return(FALSE)
+  })
+}
+```
 
 # ATLANTICHALIBUT
+
+## Map
+
+```{r}
+url <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/dev_AT/data-raw/2026/ATLANTICHALIBUT_map.png"
+```
+
+```{r, eval = check_url_exists(url)}
+knitr::include_graphics(url)
+```
+
+```{r, eval = !check_url_exists(url)}
+cat("The map for this species hasn't been created yet.")
+```
 
 ## Socioeconomic indicators
 
@@ -75,23 +106,6 @@ url1 <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/dev
 url2 <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/dev_AT/data-raw/2026/ATLANTICHALIBUT_glorys_bottomT.csv"
 ```
 
-```{r}
-check_url_exists <- function(url) {
-  tryCatch({
-    # Create a request and perform a HEAD pulse
-    resp <- httr2::request(url) |>
-      httr2::req_method("HEAD") |> 
-      httr2::req_perform()
-    
-    # Status code 200 means it exists and is accessible
-    return(httr2::resp_status(resp) == 200)
-    
-  }, error = function(e) {
-    # If the URL is broken or the server is down, return FALSE
-    return(FALSE)
-  })
-}
-```
 
 ```{r, eval = check_url_exists(url1) & check_url_exists(url2), results = "asis"}
 cat("Get the data used to make the bottom temperature indicator plots [here (pre-2021)](", url1, ") and [here (2021 and later)](", url2, ").", sep = "")

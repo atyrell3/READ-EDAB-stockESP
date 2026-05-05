@@ -24,7 +24,7 @@
     "href": "chapters/ATLANTICHALIBUT.html",
     "title": "2  ATLANTICHALIBUT",
     "section": "",
-    "text": "2.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "text": "2.1 Map",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>ATLANTICHALIBUT</span>"
     ]
@@ -33,8 +33,8 @@
     "objectID": "chapters/ATLANTICHALIBUT.html#socioeconomic-indicators",
     "href": "chapters/ATLANTICHALIBUT.html#socioeconomic-indicators",
     "title": "2  ATLANTICHALIBUT",
-    "section": "",
-    "text": "2.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n2.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n2.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n2.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n2.1.5 Average revenue per vessel ($USD2024)",
+    "section": "2.2 Socioeconomic indicators",
+    "text": "2.2 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.\n\n2.2.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n2.2.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n2.2.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n2.2.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n2.2.5 Average revenue per vessel ($USD2024)",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>ATLANTICHALIBUT</span>"
     ]
@@ -43,8 +43,8 @@
     "objectID": "chapters/ATLANTICHALIBUT.html#ecosystem-indicators",
     "href": "chapters/ATLANTICHALIBUT.html#ecosystem-indicators",
     "title": "2  ATLANTICHALIBUT",
-    "section": "2.2 Ecosystem indicators",
-    "text": "2.2 Ecosystem indicators\n\n2.2.1 Monthly bottom temperature in stock area\nGet the data used to make the bottom temperature indicator plots here (pre-2021) and here (2021 and later).",
+    "section": "2.3 Ecosystem indicators",
+    "text": "2.3 Ecosystem indicators\n\n2.3.1 Monthly bottom temperature in stock area\nGet the data used to make the bottom temperature indicator plots here (pre-2021) and here (2021 and later).",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>ATLANTICHALIBUT</span>"
     ]
@@ -54,7 +54,7 @@
     "href": "chapters/ATLANTICMACKEREL.html",
     "title": "3  ATLANTICMACKEREL",
     "section": "",
-    "text": "3.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "text": "3.1 Map\nThe map for this species hasn't been created yet.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>ATLANTICMACKEREL</span>"
     ]
@@ -63,8 +63,8 @@
     "objectID": "chapters/ATLANTICMACKEREL.html#socioeconomic-indicators",
     "href": "chapters/ATLANTICMACKEREL.html#socioeconomic-indicators",
     "title": "3  ATLANTICMACKEREL",
-    "section": "",
-    "text": "3.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n3.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n3.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n3.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n3.1.5 Average revenue per vessel ($USD2024)",
+    "section": "3.2 Socioeconomic indicators",
+    "text": "3.2 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.\n\n3.2.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n3.2.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n3.2.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n3.2.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n3.2.5 Average revenue per vessel ($USD2024)",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>ATLANTICMACKEREL</span>"
     ]
@@ -73,8 +73,8 @@
     "objectID": "chapters/ATLANTICMACKEREL.html#ecosystem-indicators",
     "href": "chapters/ATLANTICMACKEREL.html#ecosystem-indicators",
     "title": "3  ATLANTICMACKEREL",
-    "section": "3.2 Ecosystem indicators",
-    "text": "3.2 Ecosystem indicators\n\n3.2.1 Monthly bottom temperature in stock area\n\n\nBottom temperature for this species hasn't been calculated yet.",
+    "section": "3.3 Ecosystem indicators",
+    "text": "3.3 Ecosystem indicators\n\n3.3.1 Monthly bottom temperature in stock area\n\n\nBottom temperature for this species hasn't been calculated yet.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>ATLANTICMACKEREL</span>"
     ]
@@ -84,7 +84,7 @@
     "href": "chapters/ATLANTICPOLLOCK.html",
     "title": "4  ATLANTICPOLLOCK",
     "section": "",
-    "text": "4.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "text": "4.1 Map",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>ATLANTICPOLLOCK</span>"
     ]
@@ -93,8 +93,8 @@
     "objectID": "chapters/ATLANTICPOLLOCK.html#socioeconomic-indicators",
     "href": "chapters/ATLANTICPOLLOCK.html#socioeconomic-indicators",
     "title": "4  ATLANTICPOLLOCK",
-    "section": "",
-    "text": "4.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n4.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n4.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n4.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n4.1.5 Average revenue per vessel ($USD2024)",
+    "section": "4.2 Socioeconomic indicators",
+    "text": "4.2 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.\n\n4.2.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n4.2.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n4.2.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n4.2.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n4.2.5 Average revenue per vessel ($USD2024)",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>ATLANTICPOLLOCK</span>"
     ]
@@ -103,8 +103,8 @@
     "objectID": "chapters/ATLANTICPOLLOCK.html#ecosystem-indicators",
     "href": "chapters/ATLANTICPOLLOCK.html#ecosystem-indicators",
     "title": "4  ATLANTICPOLLOCK",
-    "section": "4.2 Ecosystem indicators",
-    "text": "4.2 Ecosystem indicators\n\n4.2.1 Monthly bottom temperature in stock area\nGet the data used to make the bottom temperature indicator plots here (pre-2021) and here (2021 and later).",
+    "section": "4.3 Ecosystem indicators",
+    "text": "4.3 Ecosystem indicators\n\n4.3.1 Monthly bottom temperature in stock area\nGet the data used to make the bottom temperature indicator plots here (pre-2021) and here (2021 and later).",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>ATLANTICPOLLOCK</span>"
     ]
@@ -114,7 +114,7 @@
     "href": "chapters/ATLANTICREDHAKE.html",
     "title": "5  ATLANTICREDHAKE",
     "section": "",
-    "text": "5.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "text": "5.1 Map",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>ATLANTICREDHAKE</span>"
     ]
@@ -123,8 +123,8 @@
     "objectID": "chapters/ATLANTICREDHAKE.html#socioeconomic-indicators",
     "href": "chapters/ATLANTICREDHAKE.html#socioeconomic-indicators",
     "title": "5  ATLANTICREDHAKE",
-    "section": "",
-    "text": "5.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n5.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n5.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n5.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n5.1.5 Average revenue per vessel ($USD2024)",
+    "section": "5.2 Socioeconomic indicators",
+    "text": "5.2 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.\n\n5.2.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n5.2.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n5.2.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n5.2.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n5.2.5 Average revenue per vessel ($USD2024)",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>ATLANTICREDHAKE</span>"
     ]
@@ -133,8 +133,8 @@
     "objectID": "chapters/ATLANTICREDHAKE.html#ecosystem-indicators",
     "href": "chapters/ATLANTICREDHAKE.html#ecosystem-indicators",
     "title": "5  ATLANTICREDHAKE",
-    "section": "5.2 Ecosystem indicators",
-    "text": "5.2 Ecosystem indicators\n\n5.2.1 Monthly bottom temperature in stock area\nGet the data used to make the bottom temperature indicator plots here (pre-2021) and here (2021 and later).",
+    "section": "5.3 Ecosystem indicators",
+    "text": "5.3 Ecosystem indicators\n\n5.3.1 Monthly bottom temperature in stock area\nGet the data used to make the bottom temperature indicator plots here (pre-2021) and here (2021 and later).",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>ATLANTICREDHAKE</span>"
     ]
@@ -144,7 +144,7 @@
     "href": "chapters/LONGFINSQUID.html",
     "title": "6  LONGFINSQUID",
     "section": "",
-    "text": "6.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "text": "6.1 Map\nThe map for this species hasn't been created yet.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>LONGFINSQUID</span>"
     ]
@@ -153,8 +153,8 @@
     "objectID": "chapters/LONGFINSQUID.html#socioeconomic-indicators",
     "href": "chapters/LONGFINSQUID.html#socioeconomic-indicators",
     "title": "6  LONGFINSQUID",
-    "section": "",
-    "text": "6.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n6.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n6.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n6.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n6.1.5 Average revenue per vessel ($USD2024)",
+    "section": "6.2 Socioeconomic indicators",
+    "text": "6.2 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.\n\n6.2.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n6.2.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n6.2.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n6.2.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n6.2.5 Average revenue per vessel ($USD2024)",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>LONGFINSQUID</span>"
     ]
@@ -163,8 +163,8 @@
     "objectID": "chapters/LONGFINSQUID.html#ecosystem-indicators",
     "href": "chapters/LONGFINSQUID.html#ecosystem-indicators",
     "title": "6  LONGFINSQUID",
-    "section": "6.2 Ecosystem indicators",
-    "text": "6.2 Ecosystem indicators\n\n6.2.1 Monthly bottom temperature in stock area\n\n\nBottom temperature for this species hasn't been calculated yet.",
+    "section": "6.3 Ecosystem indicators",
+    "text": "6.3 Ecosystem indicators\n\n6.3.1 Monthly bottom temperature in stock area\n\n\nBottom temperature for this species hasn't been calculated yet.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>LONGFINSQUID</span>"
     ]
@@ -174,7 +174,7 @@
     "href": "chapters/SEASCALLOP.html",
     "title": "7  SEASCALLOP",
     "section": "",
-    "text": "7.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "text": "7.1 Map\nThe map for this species hasn't been created yet.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>SEASCALLOP</span>"
     ]
@@ -183,8 +183,8 @@
     "objectID": "chapters/SEASCALLOP.html#socioeconomic-indicators",
     "href": "chapters/SEASCALLOP.html#socioeconomic-indicators",
     "title": "7  SEASCALLOP",
-    "section": "",
-    "text": "7.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n7.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n7.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n7.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n7.1.5 Average revenue per vessel ($USD2024)",
+    "section": "7.2 Socioeconomic indicators",
+    "text": "7.2 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.\n\n7.2.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n7.2.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n7.2.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n7.2.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n7.2.5 Average revenue per vessel ($USD2024)",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>SEASCALLOP</span>"
     ]
@@ -193,8 +193,8 @@
     "objectID": "chapters/SEASCALLOP.html#ecosystem-indicators",
     "href": "chapters/SEASCALLOP.html#ecosystem-indicators",
     "title": "7  SEASCALLOP",
-    "section": "7.2 Ecosystem indicators",
-    "text": "7.2 Ecosystem indicators\n\n7.2.1 Monthly bottom temperature in stock area\n\n\nBottom temperature for this species hasn't been calculated yet.",
+    "section": "7.3 Ecosystem indicators",
+    "text": "7.3 Ecosystem indicators\n\n7.3.1 Monthly bottom temperature in stock area\n\n\nBottom temperature for this species hasn't been calculated yet.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>SEASCALLOP</span>"
     ]
@@ -204,7 +204,7 @@
     "href": "chapters/SILVERHAKE.html",
     "title": "8  SILVERHAKE",
     "section": "",
-    "text": "8.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "text": "8.1 Map",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>SILVERHAKE</span>"
     ]
@@ -213,8 +213,8 @@
     "objectID": "chapters/SILVERHAKE.html#socioeconomic-indicators",
     "href": "chapters/SILVERHAKE.html#socioeconomic-indicators",
     "title": "8  SILVERHAKE",
-    "section": "",
-    "text": "8.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n8.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n8.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n8.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n8.1.5 Average revenue per vessel ($USD2024)",
+    "section": "8.2 Socioeconomic indicators",
+    "text": "8.2 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.\n\n8.2.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n8.2.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n8.2.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n8.2.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n8.2.5 Average revenue per vessel ($USD2024)",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>SILVERHAKE</span>"
     ]
@@ -223,8 +223,8 @@
     "objectID": "chapters/SILVERHAKE.html#ecosystem-indicators",
     "href": "chapters/SILVERHAKE.html#ecosystem-indicators",
     "title": "8  SILVERHAKE",
-    "section": "8.2 Ecosystem indicators",
-    "text": "8.2 Ecosystem indicators\n\n8.2.1 Monthly bottom temperature in stock area\nGet the data used to make the bottom temperature indicator plots here (pre-2021) and here (2021 and later).",
+    "section": "8.3 Ecosystem indicators",
+    "text": "8.3 Ecosystem indicators\n\n8.3.1 Monthly bottom temperature in stock area\nGet the data used to make the bottom temperature indicator plots here (pre-2021) and here (2021 and later).",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>SILVERHAKE</span>"
     ]
@@ -234,7 +234,7 @@
     "href": "chapters/WITCHFLOUNDER.html",
     "title": "9  WITCHFLOUNDER",
     "section": "",
-    "text": "9.1 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.",
+    "text": "9.1 Map\nThe map for this species hasn't been created yet.",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>WITCHFLOUNDER</span>"
     ]
@@ -243,8 +243,8 @@
     "objectID": "chapters/WITCHFLOUNDER.html#socioeconomic-indicators",
     "href": "chapters/WITCHFLOUNDER.html#socioeconomic-indicators",
     "title": "9  WITCHFLOUNDER",
-    "section": "",
-    "text": "9.1.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n9.1.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n9.1.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n9.1.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n9.1.5 Average revenue per vessel ($USD2024)",
+    "section": "9.2 Socioeconomic indicators",
+    "text": "9.2 Socioeconomic indicators\nGet the data used to make the socioeconomic indicator plots here.\n\n9.2.1 Average price per pound\n\n\n\n\n\n\n\n\n\n\n\n9.2.2 Total commercial landings (pounds)\n\n\n\n\n\n\n\n\n\n\n\n9.2.3 Total commercial revenue\n\n\n\n\n\n\n\n\n\n\n\n9.2.4 Number of commercial vessels\n\n\n\n\n\n\n\n\n\n\n\n9.2.5 Average revenue per vessel ($USD2024)",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>WITCHFLOUNDER</span>"
     ]
@@ -253,8 +253,8 @@
     "objectID": "chapters/WITCHFLOUNDER.html#ecosystem-indicators",
     "href": "chapters/WITCHFLOUNDER.html#ecosystem-indicators",
     "title": "9  WITCHFLOUNDER",
-    "section": "9.2 Ecosystem indicators",
-    "text": "9.2 Ecosystem indicators\n\n9.2.1 Monthly bottom temperature in stock area\n\n\nBottom temperature for this species hasn't been calculated yet.",
+    "section": "9.3 Ecosystem indicators",
+    "text": "9.3 Ecosystem indicators\n\n9.3.1 Monthly bottom temperature in stock area\n\n\nBottom temperature for this species hasn't been calculated yet.",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>WITCHFLOUNDER</span>"
     ]
