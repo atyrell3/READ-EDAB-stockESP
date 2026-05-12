@@ -8,3 +8,5 @@
 .RData
 
 **/*.quarto_ipynb
+
+**/*.nc
