@@ -25,7 +25,7 @@ species_shp <- create_shp(
 #   row.names = FALSE
 # )
 
-glorys <- create_spatial_indicator(
+glorys <- NEesp2::create_spatial_indicator(
   indicator_name = "bottomT",
   units = "degC",
   data.in = glorys,

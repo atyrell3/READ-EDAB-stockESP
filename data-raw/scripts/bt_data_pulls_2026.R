@@ -191,24 +191,25 @@ input_data <- list(
     "01760"
   )'),
   # witch flounder comes with a warning message: [mask] CRS do not match. Outputs a csv with 12 monthly values.
+  # removed 04 and 09 strata that correspond with state surveys
   witch_flounder = list(species = "WITCHFLOUNDER",
                      strat = 'c(
-    "04010",
-    "04030",
-    "04060",
-    "04080",
-    "09250",
-    "09260",
-    "09270",
-    "09280",
-    "09290",
-    "09300",
-    "09310",
-    "09320",
-    "09330",
-    "09340",
-    "09350",
-    "09360",
+    # "04010",
+    # "04030",
+    # "04060",
+    # "04080",
+    # "09250",
+    # "09260",
+    # "09270",
+    # "09280",
+    # "09290",
+    # "09300",
+    # "09310",
+    # "09320",
+    # "09330",
+    # "09340",
+    # "09350",
+    # "09360",
     "01220",
     "01230",
     "01240",
@@ -237,7 +238,7 @@ create_shp <- function(strata, orig_shp = shp) {
 
 eval_spatial <- function(species, strata_nums) {
   exp <- knitr::knit_expand(
-    file = here::here("data-raw/scripts/2026/spatial_code_template.R"),
+    file = here::here("data-raw/scripts/spatial_code_template.R"),
     species = species,
     strata = strata_nums
   )
@@ -251,6 +252,8 @@ purrr::map(input_data,
            ~ eval_spatial(species = .x$species,
                           strata_nums = .x$strat))
 
+#######################################################################
+# OLD WITCH FLOUNDER TEST CODE
 
 ### WITCH FLOUNDER
 # USING BTS_STRATA.shp ERRORS OUT WITH A CROPPING ERROR (Error: [crop] cannot crop a SpatRaster with an empty extent, [mask] CRS do not match )
