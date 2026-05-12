@@ -22,7 +22,7 @@ check_url_exists <- function(url) {
 ## Map
 
 ```{r}
-url <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/dev_AT/data-raw/2026/ATLANTICREDHAKE_map.png"
+url <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data-raw/2026/ATLANTICREDHAKE_map.png"
 ```
 
 ```{r, eval = check_url_exists(url)}
@@ -36,7 +36,7 @@ cat("The map for this species hasn't been created yet.")
 ## Socioeconomic indicators
 
 ```{r socioeco-data}
-url <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/2026_esp/data/intermediate/ATLANTICREDHAKE_Commercial_Indicators_Master.csv"
+url <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data/intermediate/ATLANTICREDHAKE_Commercial_Indicators_Master.csv"
 data <- read.csv(url)
 ```
 
@@ -102,8 +102,8 @@ NEesp2::plt_indicator(data = vesselrev,
 ### Monthly bottom temperature in stock area
 
 ```{r bt-data}
-url1 <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/dev_AT/data-raw/2026/ATLANTICREDHAKE_hubert_bottomT.csv"
-url2 <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/dev_AT/data-raw/2026/ATLANTICREDHAKE_glorys_bottomT.csv"
+url1 <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data-raw/2026/ATLANTICREDHAKE_hubert_bottomT.csv"
+url2 <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data-raw/2026/ATLANTICREDHAKE_glorys_bottomT.csv"
 ```
 
 
