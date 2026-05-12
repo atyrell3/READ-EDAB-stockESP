@@ -3,7 +3,7 @@
 # red and silver hake have the same strata
 # check the witch flounder strata, may be out of bounds for hubert/glorys BT
 
-devtools::load_all()
+# devtools::load_all()
 
 ### inputs ----
 
@@ -24,14 +24,15 @@ hubert <- "//nefscdata/SOE_ESP_Data/READ-EDAB-NEesp2/data-raw/2026/duPontavice_b
 hubert <- here::here('data-raw/2026/duPontavice_bottom_temp_1959_2021.nc') #|>
 
 fishbot <- '//nefscdata/SOE_ESP_Data/READ-EDAB-NEesp2/data-raw/2026/fishbot_2000_2026.nc' #|>
-  # terra::vect()
+# terra::vect()
 
 ## create stock shapefile from strata provided
 shp <- terra::vect(here::here('data-raw/shapefiles', 'BTS_STRATA.shp'))
 
 input_data <- list(
-  halibut = list(species = "ATLANTICHALIBUT",
-                 strat = 'c(
+  halibut = list(
+    species = "ATLANTICHALIBUT",
+    strat = 'c(
     "01130",
     "01140",
     "01150",
@@ -55,9 +56,11 @@ input_data <- list(
     "01380",
     "01390",
     "01400"
-  )'),
-  pollock = list(species = "ATLANTICPOLLOCK",
-                 strat = 'c(
+  )'
+  ),
+  pollock = list(
+    species = "ATLANTICPOLLOCK",
+    strat = 'c(
     "01130",
     "01140",
     "01150",
@@ -81,9 +84,11 @@ input_data <- list(
     "01380",
     "01390",
     "01400"
-  )'),
-  red_hake = list(species = "ATLANTICREDHAKE",
-                  strat = 'c(
+  )'
+  ),
+  red_hake = list(
+    species = "ATLANTICREDHAKE",
+    strat = 'c(
     "01200",
     "01210",
     "01220",
@@ -135,9 +140,11 @@ input_data <- list(
     "01740",
     "01750",
     "01760"
-  )'),
-  silver_hake = list(species = "SILVERHAKE",
-                     strat = 'c(
+  )'
+  ),
+  silver_hake = list(
+    species = "SILVERHAKE",
+    strat = 'c(
     "01200",
     "01210",
     "01220",
@@ -189,11 +196,13 @@ input_data <- list(
     "01740",
     "01750",
     "01760"
-  )'),
+  )'
+  ),
   # witch flounder comes with a warning message: [mask] CRS do not match. Outputs a csv with 12 monthly values.
   # removed 04 and 09 strata that correspond with state surveys
-  witch_flounder = list(species = "WITCHFLOUNDER",
-                     strat = 'c(
+  witch_flounder = list(
+    species = "WITCHFLOUNDER",
+    strat = 'c(
     # "04010",
     # "04030",
     # "04060",
@@ -224,7 +233,9 @@ input_data <- list(
     "01380",
     "01390",
     "01400"
-  )'))
+  )'
+  )
+)
 
 ## functions ----
 create_shp <- function(strata, orig_shp = shp) {
@@ -242,15 +253,16 @@ eval_spatial <- function(species, strata_nums) {
     species = species,
     strata = strata_nums
   )
-  
+
   eval(parse(text = exp))
 }
 
 ### run ----
 
-purrr::map(input_data,
-           ~ eval_spatial(species = .x$species,
-                          strata_nums = .x$strat))
+purrr::map(
+  input_data,
+  ~ eval_spatial(species = .x$species, strata_nums = .x$strat)
+)
 
 #######################################################################
 # OLD WITCH FLOUNDER TEST CODE
