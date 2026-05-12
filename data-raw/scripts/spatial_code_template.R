@@ -35,7 +35,7 @@ glorys <- NEesp2::create_spatial_indicator(
   var.name = "bottomT",
   area.names = "stock_area",
   statistic = 'mean',
-  agg.time = 'months',
+  agg.time = 'days',
   tz = NA,
   touches = TRUE,
   write.out = F
