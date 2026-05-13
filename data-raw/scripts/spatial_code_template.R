@@ -49,6 +49,29 @@ write.csv(
   row.names = FALSE
 )
 
+# glorys bottom salinity ----
+glorys_species_sal <- NEesp2::create_spatial_indicator(
+  indicator_name = "bottomS",
+  units = "1e-3",
+  data.in = glorys_salinity,
+  file.time = 'annual',
+  output.files = c(here::here('data-raw', '{{ species }}_glorys_bottomS.nc')),
+  shp.file = species_shp,
+  var.name = "so",
+  area.names = "stock_area",
+  statistic = 'mean',
+  agg.time = 'days',
+  tz = NA,
+  touches = TRUE,
+  write.out = F
+)
+
+write.csv(
+  glorys_salinity,
+  here::here('data-raw/2026', '{{ species }}_glorys_bottomS.csv'),
+  row.names = FALSE
+)
+
 # map ----
 # us <- geodata::gadm(
 #   country = "USA",

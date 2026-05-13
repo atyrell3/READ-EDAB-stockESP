@@ -5,18 +5,18 @@ species_names <- c(
   "ATLANTICREDHAKE",
   "LONGFINSQUID",
   "SEASCALLOP",
-  "SILVERHAKE",
-  "WITCHFLOUNDER"
+  "SILVER(WHITING)HAKE",
+  "WITCH(GRAY SOLE)FLOUNDER"
 )
 
-create_child <- function(species_name) {
-  filename <- here::here("chapters", paste0(species_name, ".qmd"))
+create_child <- function(species_names) {
+  filename <- here::here("chapters", paste0(species_names, ".qmd"))
   file.create(filename)
 
   writeLines(
     text = knitr::knit_expand(
       file = here::here("utils/child_doc.qmd"),
-      species = species_name
+      species = species_names
     ),
     con = filename
   )

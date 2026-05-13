@@ -17,12 +17,12 @@ check_url_exists <- function(url) {
 }
 ```
 
-# ATLANTICMACKEREL
+# SILVER(WHITING)HAKE
 
 ## Map
 
 ```{r}
-url <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data-raw/2026/ATLANTICMACKEREL_map.png"
+url <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data-raw/2026/SILVER(WHITING)HAKE_map.png"
 ```
 
 ```{r, eval = check_url_exists(url)}
@@ -36,7 +36,7 @@ cat("The map for this species hasn't been created yet.")
 ## Socioeconomic indicators
 
 ```{r socioeco-data}
-url <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data/intermediate/ATLANTICMACKEREL_Commercial_Indicators_Master.csv"
+url <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data/intermediate/SILVER(WHITING)HAKE_Commercial_Indicators_Master.csv"
 data <- read.csv(url)
 ```
 
@@ -46,7 +46,7 @@ Get the data used to make the socioeconomic indicator plots [here](`r url`).
 
 ```{r}
 avgprice <- data |>
-  dplyr::filter(INDICATOR_NAME == "AVGPRICE_ATLANTICMACKEREL_2025_DOLlb") 
+  dplyr::filter(INDICATOR_NAME == "AVGPRICE_SILVER(WHITING)HAKE_2025_DOLlb") 
 
 NEesp2::plt_indicator(data = avgprice,
                       ar = 1/4,
@@ -57,7 +57,7 @@ NEesp2::plt_indicator(data = avgprice,
 
 ```{r}
 landings <- data |>
-  dplyr::filter(INDICATOR_NAME == "Commercial_ATLANTICMACKEREL_Landings_LBS") 
+  dplyr::filter(INDICATOR_NAME == "Commercial_SILVER(WHITING)HAKE_Landings_LBS") 
 
 NEesp2::plt_indicator(data = landings,
                       ar = 1/4,
@@ -68,7 +68,7 @@ NEesp2::plt_indicator(data = landings,
 
 ```{r}
 totalrev <- data |>
-  dplyr::filter(INDICATOR_NAME == "TOTALANNUALREV_ATLANTICMACKEREL_2025Dols") 
+  dplyr::filter(INDICATOR_NAME == "TOTALANNUALREV_SILVER(WHITING)HAKE_2025Dols") 
 
 NEesp2::plt_indicator(data = totalrev,
                       ar = 1/4,
@@ -79,7 +79,7 @@ NEesp2::plt_indicator(data = totalrev,
 
 ```{r}
 nvessels <- data |>
-  dplyr::filter(INDICATOR_NAME == "N_Commercial_Vessels_Landing_ATLANTICMACKEREL") 
+  dplyr::filter(INDICATOR_NAME == "N_Commercial_Vessels_Landing_SILVER(WHITING)HAKE") 
 
 NEesp2::plt_indicator(data = nvessels,
                       ar = 1/4,
@@ -90,7 +90,7 @@ NEesp2::plt_indicator(data = nvessels,
 
 ```{r}
 vesselrev <- data |>
-  dplyr::filter(INDICATOR_NAME == "AVGVESREVperYr_ATLANTICMACKEREL_2025_DOLlb") 
+  dplyr::filter(INDICATOR_NAME == "AVGVESREVperYr_SILVER(WHITING)HAKE_2025_DOLlb") 
 
 NEesp2::plt_indicator(data = vesselrev,
                       ar = 1/4,
@@ -102,8 +102,8 @@ NEesp2::plt_indicator(data = vesselrev,
 ### Monthly bottom temperature in stock area
 
 ```{r bt-data}
-url1 <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data-raw/2026/ATLANTICMACKEREL_hubert_bottomT.csv"
-url2 <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data-raw/2026/ATLANTICMACKEREL_glorys_bottomT.csv"
+url1 <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data-raw/2026/SILVER(WHITING)HAKE_hubert_bottomT.csv"
+url2 <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data-raw/2026/SILVER(WHITING)HAKE_glorys_bottomT.csv"
 ```
 
 
@@ -138,7 +138,7 @@ cat("Bottom temperature for this species hasn't been calculated yet.")
 <!-- ### Monthly bottom salinity in stock area -->
 
 <!-- ```{r bs-data} -->
-<!-- url3 <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data-raw/2026/ATLANTICMACKEREL_bottomS.csv" -->
+<!-- url3 <- "https://raw.githubusercontent.com/atyrell3/READ-EDAB-stockESP/refs/heads/main/data-raw/2026/SILVER(WHITING)HAKE_bottomS.csv" -->
 <!-- ``` -->
 
 <!-- ```{r, eval = check_url_exists(url3), results = "asis"} -->
