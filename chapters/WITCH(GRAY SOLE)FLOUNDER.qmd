@@ -124,7 +124,7 @@ cat("Bottom temperature for this species hasn't been calculated yet.")
 
 
 ```{r bs-data}
- url3 <- here::here("data-raw/2026/WITCH(GRAY SOLE)FLOUNDER_bottomS.csv")
+ url3 <- here::here("data-raw/2026/WITCH(GRAY SOLE)FLOUNDER_glorys_bottomS.csv")
 ```
 
 ```{r, eval = file.exists(url3), results = "asis"}
@@ -150,6 +150,6 @@ for(i in 1:12) {
 }
 ```
 
-```{r, eval = !(file.exists(url3)}
+```{r, eval = !file.exists(url3)}
 cat("Bottom salinity for this species hasn't been calculated yet.")
 ```
