@@ -1,0 +1,158 @@
+---
+title: "Aggregate biomass"
+format:
+  html:
+    code-fold: true
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  fig.height = 4,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+```{r}
+survdat <- "\\\\nefscdata\\EDAB_Datasets\\Workflows\\surveyNoLengthsData.rds" |>
+  readRDS()
+
+species_key <- "\\\\nefscdata\\EDAB_Datasets\\Workflows\\SOE_species_list_24.rds" |>
+  readRDS()
+
+data <- survdat$survdat
+EPU <- c('MAB', 'GB', 'GOM', 'SS')
+MAB <- c(1010:1080, 1100:1120, 1600:1750, 3010:3450, 3470, 3500, 3510)
+GB <- c(1090, 1130:1210, 1230, 1250, 3460, 3480, 3490, 3520:3550)
+GOM <- c(1220, 1240, 1260:1290, 1360:1400, 3560:3830)
+SS <- c(1300:1352, 3840:3990)
+```
+
+## Bulk aggregate biomass by EPU
+
+```{r, results = "hide"}
+for(i in c("MAB", "GB", "GOM")){
+  plt <- survdat::calc_stratified_mean(
+    data |>
+      dplyr::mutate(group = "unit"),
+    filterByArea = get(i),
+    filterBySeason = c('FALL', 'SPRING'),
+    groupDescription = 'group',
+    tidy = TRUE
+  ) |>
+    dplyr::filter(variable == "strat.biomass") |>
+    ggplot2::ggplot(ggplot2::aes(x = YEAR, 
+                                 y = value,
+                                 color = SEASON)) +
+    ggplot2::geom_line() +
+    ggplot2::geom_point() +
+    ggplot2::theme_bw() +
+    ggplot2::ggtitle(paste(i, "stratified mean biomass"))
+  
+  print(plt)
+}
+```
+
+## Species-level changes
+
+Looking at species seen in 10+ years, with an average > 1 kg/tow.
+
+```{r, eval = FALSE}
+i <- "MAB"
+  plt <- survdat::calc_stratified_mean(
+    data |>
+      dplyr::filter(SVSPP == 1) |>
+      dplyr::mutate(group = "unit"),
+    filterByArea = get(i),
+    filterBySeason = c('FALL', 'SPRING'),
+    groupDescription = 'group',
+    tidy = TRUE
+  ) |>
+    dplyr::filter(variable == "strat.biomass") |>
+    ggplot2::ggplot(ggplot2::aes(x = YEAR, 
+                                 y = value,
+                                 color = SEASON)) +
+    ggplot2::geom_line() +
+    ggplot2::geom_point() +
+    ggplot2::theme_bw() +
+    ggplot2::ggtitle(paste(i, "stratified mean biomass"))
+  
+  print(plt)
+```
+
+```{r, results = "hide"}
+species_dat <- data |>
+  dplyr::group_by(YEAR, SEASON, SVSPP) |>
+  dplyr::mutate(n = dplyr::n()) |>
+  dplyr::filter(n > 2)|>
+  dplyr::select(-n) |>
+  dplyr::ungroup()
+
+joined_names <- species_dat |>
+  dplyr::left_join(species_key, 
+                   by = c("SVSPP" = "SVSPP")) 
+
+svspps <- unique(joined_names$SVSPP) |> sort()
+
+# library(data.table)
+
+message("starting loop")
+
+for(i in c("MAB", "GB", "GOM")){
+      dat <- survdat::calc_stratified_mean(
+    data,
+    filterByArea = get(i),
+    filterBySeason = c('FALL', 'SPRING'),
+    groupDescription = 'SVSPP',
+    tidy = TRUE
+  ) 
+      cat(i, "stratified mean biomass")
+    cat("Aggregate abundance trend of consistently-observed species")
+    
+        plt <- dat |>
+          dplyr::filter(variable == "strat.biomass") |>
+          # dplyr::mutate(SVSPP = as.factor(SVSPP)) |>
+    ggplot2::ggplot(ggplot2::aes(x = YEAR,
+                                 y = value,
+                                 fill = SVSPP)) +
+    ggplot2::geom_col() +
+    ggplot2::theme_bw() +
+    ggplot2::labs(title = paste(i, "stratified mean biomass -- consistent species only")) +
+      viridis::scale_fill_viridis() +
+      ggplot2::theme(legend.position = "bottom") +
+          ggplot2::facet_wrap(~SEASON)
+
+  print(plt)
+  
+  cat("Species abundances")
+      
+      for(j in unique(dat$SVSPP)) {
+        ## TODO: figure out if strata with 0 observations are skewing results
+        
+        this_dat <- dat |>
+          dplyr::filter(SVSPP == j,
+                        variable == "strat.biomass")
+        
+        if(nrow(this_dat) > 10 &
+           mean(this_dat$value) > 1) {
+          name <- paste(joined_names$COMNAME[joined_names$SVSPP == j][1],
+                  joined_names$SCINAME[joined_names$SVSPP == j][1])
+      
+    plt <- this_dat |>
+    ggplot2::ggplot(ggplot2::aes(x = YEAR,
+                                 y = value,
+                                 color = SEASON)) +
+    ggplot2::geom_line() +
+    ggplot2::geom_point() +
+    ggplot2::theme_bw() +
+    ggplot2::labs(title = paste(i, j, "stratified mean biomass"),
+                     subtitle = name)
+
+  print(plt)
+        }
+      }
+  }
+
+
+```
+
