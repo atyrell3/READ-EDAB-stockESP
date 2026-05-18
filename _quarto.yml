@@ -20,8 +20,8 @@ book:
     - chapters/ATLANTICREDHAKE.qmd
     - chapters/LONGFINSQUID.qmd
     - chapters/SEASCALLOP.qmd
-    - chapters/SILVERHAKE.qmd
-    - chapters/WITCHFLOUNDER.qmd
+    - chapters/SILVER(WHITING)HAKE.qmd
+    - chapters/WITCH(GRAY SOLE)FLOUNDER.qmd
     - references.qmd
 
 bibliography: references.bib

@@ -50,7 +50,7 @@ write.csv(
 )
 
 # glorys bottom salinity ----
-glorys_species_sal <- NEesp2::create_spatial_indicator(
+glorys_species_sal <- create_spatial_indicator(
   indicator_name = "bottomS",
   units = "1e-3",
   data.in = glorys_salinity,
@@ -67,7 +67,7 @@ glorys_species_sal <- NEesp2::create_spatial_indicator(
 )
 
 write.csv(
-  glorys_salinity,
+  glorys_species_sal,
   here::here('data-raw/2026', '{{ species }}_glorys_bottomS.csv'),
   row.names = FALSE
 )
