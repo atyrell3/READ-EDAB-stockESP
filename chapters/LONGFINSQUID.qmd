@@ -1,42 +1,25 @@
 
-```{r}
-check_url_exists <- function(url) {
-  tryCatch({
-    # Create a request and perform a HEAD pulse
-    resp <- httr2::request(url) |>
-      httr2::req_method("HEAD") |> 
-      httr2::req_perform()
-    
-    # Status code 200 means it exists and is accessible
-    return(httr2::resp_status(resp) == 200)
-    
-  }, error = function(e) {
-    # If the URL is broken or the server is down, return FALSE
-    return(FALSE)
-  })
-}
-```
-
 # LONGFINSQUID
 
 ## Map
 
 ```{r}
-url <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/dev_AT/data-raw/2026/LONGFINSQUID_map.png"
+url <- here::here("data-raw/2026/LONGFINSQUID_map.png")
+#url <- here::here('data-raw/2026', 'LONGFINSQUID_map.png')
 ```
 
-```{r, eval = check_url_exists(url)}
+```{r, eval = file.exists(url)}
 knitr::include_graphics(url)
 ```
 
-```{r, eval = !check_url_exists(url)}
+```{r, eval = !file.exists(url)}
 cat("The map for this species hasn't been created yet.")
 ```
 
 ## Socioeconomic indicators
 
 ```{r socioeco-data}
-url <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/2026_esp/data/intermediate/LONGFINSQUID_Commercial_Indicators_Master.csv"
+url <- here::here("data/intermediate/LONGFINSQUID_Commercial_Indicators_Master.csv")
 data <- read.csv(url)
 ```
 
@@ -102,16 +85,18 @@ NEesp2::plt_indicator(data = vesselrev,
 ### Monthly bottom temperature in stock area
 
 ```{r bt-data}
-url1 <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/dev_AT/data-raw/2026/LONGFINSQUID_hubert_bottomT.csv"
-url2 <- "https://raw.githubusercontent.com/NEFSC/READ-EDAB-NEesp2/refs/heads/dev_AT/data-raw/2026/LONGFINSQUID_glorys_bottomT.csv"
+url1 <- here::here("data-raw/2026/LONGFINSQUID_hubert_bottomT.csv")
+#url1 <- here::here('data-raw/2026', 'LONGFINSQUID_hubert_bottomT.csv')
+url2 <- here::here("data-raw/2026/LONGFINSQUID_glorys_bottomT.csv")
+#url2 <- here::here('data-raw/2026', 'LONGFINSQUID_glorys_bottomT.csv')
 ```
 
 
-```{r, eval = check_url_exists(url1) & check_url_exists(url2), results = "asis"}
+```{r, eval = file.exists(url1) & file.exists(url2), results = "asis"}
 cat("Get the data used to make the bottom temperature indicator plots [here (pre-2021)](", url1, ") and [here (2021 and later)](", url2, ").", sep = "")
 ```
 
-```{r, eval = check_url_exists(url1) & check_url_exists(url2)}
+```{r, eval = file.exists(url1) & file.exists(url2)}
 bt_data <- read.csv(url1) |>
   dplyr::bind_rows(read.csv(url2)) |>
   dplyr::group_by(AREA, MONTH, YEAR, INDICATOR_NAME, INDICATOR_UNITS) |>
@@ -131,6 +116,40 @@ for(i in 1:12) {
 }
 ```
 
-```{r, eval = !(check_url_exists(url1) & check_url_exists(url2))}
+```{r, eval = !(file.exists(url1) & file.exists(url2))}
 cat("Bottom temperature for this species hasn't been calculated yet.")
+```
+
+### Monthly bottom salinity in stock area
+
+
+```{r bs-data}
+ url3 <- here::here("data-raw/2026/LONGFINSQUID_glorys_bottomS.csv")
+```
+
+```{r, eval = file.exists(url3), results = "asis"}
+cat("Get the data used to make the bottom salinity indicator plots [here](", url3, ").")
+```
+
+```{r, eval = file.exists(url3)}
+bs_data <- read.csv(url3) |>
+  dplyr::group_by(AREA, MONTH, YEAR, INDICATOR_NAME, INDICATOR_UNITS) |>
+  dplyr::summarise(DATA_VALUE = mean(DATA_VALUE, na.rm = TRUE), .groups = "drop") |>
+  dplyr::mutate(INDICATOR_NAME = "monthly_bottomS")
+
+for(i in 1:12) {
+  print(
+    bt_data |>
+      dplyr::filter(MONTH == i) |>
+      NEesp2::plt_indicator(
+        ar = 1/4,
+        include_trends = TRUE
+      ) +
+      ggplot2::ggtitle(paste0("Monthly bottom salinity in stock area - ", month.abb[i]))
+  )
+}
+```
+
+```{r, eval = !file.exists(url3)}
+cat("Bottom salinity for this species hasn't been calculated yet.")
 ```

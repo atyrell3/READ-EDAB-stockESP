@@ -143,7 +143,7 @@ input_data <- list(
   )'
   ),
   silver_hake = list(
-    species = "SILVERHAKE",
+    species = "SILVER(WHITING)HAKE",
     strat = 'c(
     "01200",
     "01210",
@@ -201,7 +201,7 @@ input_data <- list(
   # witch flounder comes with a warning message: [mask] CRS do not match. Outputs a csv with 12 monthly values.
   # removed 04 and 09 strata that correspond with state surveys
   witch_flounder = list(
-    species = "WITCHFLOUNDER",
+    species = "WITCH(GRAY SOLE)FLOUNDER",
     strat = 'c(
     # "04010",
     # "04030",

@@ -1,0 +1,155 @@
+
+# WITCH(GRAY SOLE)FLOUNDER
+
+## Map
+
+```{r}
+url <- here::here("data-raw/2026/WITCH(GRAY SOLE)FLOUNDER_map.png")
+#url <- here::here('data-raw/2026', 'WITCH(GRAY SOLE)FLOUNDER_map.png')
+```
+
+```{r, eval = file.exists(url)}
+knitr::include_graphics(url)
+```
+
+```{r, eval = !file.exists(url)}
+cat("The map for this species hasn't been created yet.")
+```
+
+## Socioeconomic indicators
+
+```{r socioeco-data}
+url <- here::here("data/intermediate/WITCH(GRAY SOLE)FLOUNDER_Commercial_Indicators_Master.csv")
+data <- read.csv(url)
+```
+
+Get the data used to make the socioeconomic indicator plots [here](`r url`).
+
+### Average price per pound
+
+```{r}
+avgprice <- data |>
+  dplyr::filter(INDICATOR_NAME == "AVGPRICE_WITCH(GRAY SOLE)FLOUNDER_2025_DOLlb") 
+
+NEesp2::plt_indicator(data = avgprice,
+                      ar = 1/4,
+                      include_trends = TRUE) 
+```
+
+### Total commercial landings (pounds)
+
+```{r}
+landings <- data |>
+  dplyr::filter(INDICATOR_NAME == "Commercial_WITCH(GRAY SOLE)FLOUNDER_Landings_LBS") 
+
+NEesp2::plt_indicator(data = landings,
+                      ar = 1/4,
+                      include_trends = TRUE)
+```
+
+### Total commercial revenue
+
+```{r}
+totalrev <- data |>
+  dplyr::filter(INDICATOR_NAME == "TOTALANNUALREV_WITCH(GRAY SOLE)FLOUNDER_2025Dols") 
+
+NEesp2::plt_indicator(data = totalrev,
+                      ar = 1/4,
+                      include_trends = TRUE)
+```
+
+### Number of commercial vessels
+
+```{r}
+nvessels <- data |>
+  dplyr::filter(INDICATOR_NAME == "N_Commercial_Vessels_Landing_WITCH(GRAY SOLE)FLOUNDER") 
+
+NEesp2::plt_indicator(data = nvessels,
+                      ar = 1/4,
+                      include_trends = TRUE)
+```
+
+### Average revenue per vessel ($USD2024)
+
+```{r}
+vesselrev <- data |>
+  dplyr::filter(INDICATOR_NAME == "AVGVESREVperYr_WITCH(GRAY SOLE)FLOUNDER_2025_DOLlb") 
+
+NEesp2::plt_indicator(data = vesselrev,
+                      ar = 1/4,
+                      include_trends = TRUE)
+```
+
+## Ecosystem indicators
+
+### Monthly bottom temperature in stock area
+
+```{r bt-data}
+url1 <- here::here("data-raw/2026/WITCH(GRAY SOLE)FLOUNDER_hubert_bottomT.csv")
+#url1 <- here::here('data-raw/2026', 'WITCH(GRAY SOLE)FLOUNDER_hubert_bottomT.csv')
+url2 <- here::here("data-raw/2026/WITCH(GRAY SOLE)FLOUNDER_glorys_bottomT.csv")
+#url2 <- here::here('data-raw/2026', 'WITCH(GRAY SOLE)FLOUNDER_glorys_bottomT.csv')
+```
+
+
+```{r, eval = file.exists(url1) & file.exists(url2), results = "asis"}
+cat("Get the data used to make the bottom temperature indicator plots [here (pre-2021)](", url1, ") and [here (2021 and later)](", url2, ").", sep = "")
+```
+
+```{r, eval = file.exists(url1) & file.exists(url2)}
+bt_data <- read.csv(url1) |>
+  dplyr::bind_rows(read.csv(url2)) |>
+  dplyr::group_by(AREA, MONTH, YEAR, INDICATOR_NAME, INDICATOR_UNITS) |>
+  dplyr::summarise(DATA_VALUE = mean(DATA_VALUE, na.rm = TRUE), .groups = "drop") |>
+  dplyr::mutate(INDICATOR_NAME = "monthly_bottomT")
+
+for(i in 1:12) {
+  print(
+    bt_data |>
+      dplyr::filter(MONTH == i) |>
+      NEesp2::plt_indicator(
+        ar = 1/4,
+        include_trends = TRUE
+      ) +
+      ggplot2::ggtitle(paste0("Monthly bottom temperature in stock area - ", month.abb[i]))
+  )
+}
+```
+
+```{r, eval = !(file.exists(url1) & file.exists(url2))}
+cat("Bottom temperature for this species hasn't been calculated yet.")
+```
+
+### Monthly bottom salinity in stock area
+
+
+```{r bs-data}
+ url3 <- here::here("data-raw/2026/WITCH(GRAY SOLE)FLOUNDER_glorys_bottomS.csv")
+```
+
+```{r, eval = file.exists(url3), results = "asis"}
+cat("Get the data used to make the bottom salinity indicator plots [here](", url3, ").")
+```
+
+```{r, eval = file.exists(url3)}
+bs_data <- read.csv(url3) |>
+  dplyr::group_by(AREA, MONTH, YEAR, INDICATOR_NAME, INDICATOR_UNITS) |>
+  dplyr::summarise(DATA_VALUE = mean(DATA_VALUE, na.rm = TRUE), .groups = "drop") |>
+  dplyr::mutate(INDICATOR_NAME = "monthly_bottomS")
+
+for(i in 1:12) {
+  print(
+    bt_data |>
+      dplyr::filter(MONTH == i) |>
+      NEesp2::plt_indicator(
+        ar = 1/4,
+        include_trends = TRUE
+      ) +
+      ggplot2::ggtitle(paste0("Monthly bottom salinity in stock area - ", month.abb[i]))
+  )
+}
+```
+
+```{r, eval = !file.exists(url3)}
+cat("Bottom salinity for this species hasn't been calculated yet.")
+```
