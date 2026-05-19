@@ -17,8 +17,11 @@ knitr::opts_chunk$set(
 survdat <- "\\\\nefscdata\\EDAB_Datasets\\Workflows\\surveyNoLengthsData.rds" |>
   readRDS()
 
-species_key <- "\\\\nefscdata\\EDAB_Datasets\\Workflows\\SOE_species_list_24.rds" |>
-  readRDS()
+# species_key <- "\\\\nefscdata\\EDAB_Datasets\\Workflows\\SOE_species_list_24.rds" |>
+#   readRDS()
+
+species_key <- here::here("data/SVSPP_species_list.csv") |>
+  read.csv()
 
 data <- survdat$survdat
 EPU <- c('MAB', 'GB', 'GOM', 'SS')
@@ -32,14 +35,20 @@ SS <- c(1300:1352, 3840:3990)
 
 ```{r, results = "hide"}
 for(i in c("MAB", "GB", "GOM")){
-  plt <- survdat::calc_stratified_mean(
+  dat <- survdat::calc_stratified_mean(
     data |>
       dplyr::mutate(group = "unit"),
     filterByArea = get(i),
     filterBySeason = c('FALL', 'SPRING'),
     groupDescription = 'group',
     tidy = TRUE
-  ) |>
+  ) 
+  
+  n_strat <- data |> dplyr::filter(STRATUM %in% get(i))
+  
+  n_0_strata <- length(get(i)) - length(unique(n_strat$STRATUM))
+  
+  plt <- dat |>
     dplyr::filter(variable == "strat.biomass") |>
     ggplot2::ggplot(ggplot2::aes(x = YEAR, 
                                  y = value,
@@ -47,40 +56,106 @@ for(i in c("MAB", "GB", "GOM")){
     ggplot2::geom_line() +
     ggplot2::geom_point() +
     ggplot2::theme_bw() +
-    ggplot2::ggtitle(paste(i, "stratified mean biomass"))
+    ggplot2::ggtitle(paste(i, "stratified mean biomass")) +
+    ggplot2::labs(caption = paste("number of strata with no observations:", n_0_strata))
   
   print(plt)
 }
 ```
 
-## Species-level changes
+## Managed vs unmanaged species
 
-Looking at species seen in 10+ years, with an average > 1 kg/tow.
+```{r, results = "hide"}
 
-```{r, eval = FALSE}
-i <- "MAB"
-  plt <- survdat::calc_stratified_mean(
-    data |>
-      dplyr::filter(SVSPP == 1) |>
-      dplyr::mutate(group = "unit"),
+joined_dat <- data |>
+  dplyr::left_join(species_key, 
+                   by = c("SVSPP" = "SVSPP")) |>
+  dplyr::mutate(Fed.Managed = dplyr::case_when(is.na(Fed.Managed) ~ "Unmanaged",
+                                               Fed.Managed == "ASMFC " ~ "ASMFC", 
+                                               TRUE ~ Fed.Managed))
+
+for(i in c("MAB", "GB", "GOM")){
+  dat <- survdat::calc_stratified_mean(
+    joined_dat,
     filterByArea = get(i),
     filterBySeason = c('FALL', 'SPRING'),
-    groupDescription = 'group',
+    groupDescription = 'Fed.Managed',
     tidy = TRUE
-  ) |>
+  ) 
+  
+  # n_strat <- data |> dplyr::filter(STRATUM %in% get(i))
+  # 
+  # n_0_strata <- length(get(i)) - length(unique(n_strat$STRATUM))
+  
+  plt <- dat |>
     dplyr::filter(variable == "strat.biomass") |>
+    dplyr::group_by(Fed.Managed) |>
+    dplyr::mutate(n = dplyr::n()) |>
+    dplyr::filter(n > 4) |>
+    dplyr::ungroup() |>
     ggplot2::ggplot(ggplot2::aes(x = YEAR, 
                                  y = value,
                                  color = SEASON)) +
     ggplot2::geom_line() +
     ggplot2::geom_point() +
     ggplot2::theme_bw() +
-    ggplot2::ggtitle(paste(i, "stratified mean biomass"))
+    ggplot2::facet_wrap(~Fed.Managed,
+                        scales = "free_y") +
+    ggplot2::ggtitle(paste(i, "stratified mean biomass")) #+
+    # ggplot2::labs(caption = paste("number of strata with no observations:", n_0_strata))
   
   print(plt)
+}
 ```
 
+
 ```{r, results = "hide"}
+#| fig-height: 12
+
+for(i in c("MAB", "GB", "GOM")){
+  dat <- survdat::calc_stratified_mean(
+    joined_dat |>
+      dplyr::mutate(Fed.Managed = ifelse(stringr::str_detect(Fed.Managed, ", Protected Species"), stringr::str_remove(Fed.Managed, ", Protected Species"), Fed.Managed),
+                    cat = paste0(Fed.Managed, "_", SVSPP)),
+    filterByArea = get(i),
+    filterBySeason = c('FALL', 'SPRING'),
+    groupDescription = 'cat',
+    tidy = TRUE
+  ) 
+ 
+  for(j in c("NEFMC", "MAFMC", "ASMFC", "JOINT")) {
+    cat(i, j, "stratified mean biomass")
+  
+  plt <- dat |>
+    dplyr::filter(stringr::str_detect(cat, j)) |>
+    dplyr::mutate(SVSPP = stringr::str_remove(cat, paste0(j, "_")) |>
+                    as.numeric()) |>
+    dplyr::left_join(species_key) |>
+    dplyr::filter(variable == "strat.biomass",
+                  !is.na(COMNAME)) |>
+    ggplot2::ggplot(ggplot2::aes(x = YEAR, 
+                                 y = value,
+                                 fill = COMNAME)) +
+    ggplot2::geom_col() +
+    ggplot2::theme_bw() +
+    ggplot2::facet_grid(cols = ggplot2::vars(SEASON),
+                        rows = ggplot2::vars(SOE.24),
+                        scales = "free_y") +
+    ggplot2::ggtitle(paste(i, j, "stratified mean biomass")) +
+    ggplot2::theme(legend.position = "bottom")
+    # ggplot2::labs(caption = paste("number of strata with no observations:", n_0_strata))
+  
+  print(plt)
+  }
+}
+```
+
+
+## Species-level changes
+
+Looking at species seen in 10+ years, with an average > 1 kg/tow.
+
+```{r, results = "hide", eval = FALSE}
 species_dat <- data |>
   dplyr::group_by(YEAR, SEASON, SVSPP) |>
   dplyr::mutate(n = dplyr::n()) |>
@@ -94,7 +169,7 @@ joined_names <- species_dat |>
 
 svspps <- unique(joined_names$SVSPP) |> sort()
 
-# library(data.table)
+ # library(data.table)
 
 message("starting loop")
 
@@ -108,6 +183,9 @@ for(i in c("MAB", "GB", "GOM")){
   ) 
       cat(i, "stratified mean biomass")
     cat("Aggregate abundance trend of consistently-observed species")
+
+    n_0_strata <- length(get(i)) - length(unique(data$STRATA))
+    
     
         plt <- dat |>
           dplyr::filter(variable == "strat.biomass") |>
