@@ -139,7 +139,7 @@ bs_data <- read.csv(url3) |>
 
 for(i in 1:12) {
   print(
-    bt_data |>
+    bs_data |>
       dplyr::filter(MONTH == i) |>
       NEesp2::plt_indicator(
         ar = 1/4,
