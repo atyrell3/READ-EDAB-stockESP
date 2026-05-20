@@ -5,7 +5,6 @@
 
 ```{r}
 url <- here::here("data-raw/2026/SEASCALLOP_map.png")
-#url <- here::here('data-raw/2026', 'SEASCALLOP_map.png')
 ```
 
 ```{r, eval = file.exists(url)}
@@ -33,7 +32,8 @@ avgprice <- data |>
 
 NEesp2::plt_indicator(data = avgprice,
                       ar = 1/4,
-                      include_trends = TRUE) 
+                      include_trends = TRUE) |>
+  plotly::ggplotly() 
 ```
 
 ### Total commercial landings (pounds)
@@ -44,7 +44,8 @@ landings <- data |>
 
 NEesp2::plt_indicator(data = landings,
                       ar = 1/4,
-                      include_trends = TRUE)
+                      include_trends = TRUE) |>
+  plotly::ggplotly() 
 ```
 
 ### Total commercial revenue
@@ -55,7 +56,8 @@ totalrev <- data |>
 
 NEesp2::plt_indicator(data = totalrev,
                       ar = 1/4,
-                      include_trends = TRUE)
+                      include_trends = TRUE) |>
+  plotly::ggplotly() 
 ```
 
 ### Number of commercial vessels
@@ -66,7 +68,8 @@ nvessels <- data |>
 
 NEesp2::plt_indicator(data = nvessels,
                       ar = 1/4,
-                      include_trends = TRUE)
+                      include_trends = TRUE) |>
+  plotly::ggplotly() 
 ```
 
 ### Average revenue per vessel ($USD2024)
@@ -77,7 +80,8 @@ vesselrev <- data |>
 
 NEesp2::plt_indicator(data = vesselrev,
                       ar = 1/4,
-                      include_trends = TRUE)
+                      include_trends = TRUE) |>
+  plotly::ggplotly() 
 ```
 
 ## Ecosystem indicators
@@ -86,9 +90,7 @@ NEesp2::plt_indicator(data = vesselrev,
 
 ```{r bt-data}
 url1 <- here::here("data-raw/2026/SEASCALLOP_hubert_bottomT.csv")
-#url1 <- here::here('data-raw/2026', 'SEASCALLOP_hubert_bottomT.csv')
 url2 <- here::here("data-raw/2026/SEASCALLOP_glorys_bottomT.csv")
-#url2 <- here::here('data-raw/2026', 'SEASCALLOP_glorys_bottomT.csv')
 ```
 
 
@@ -110,8 +112,10 @@ for(i in 1:12) {
       NEesp2::plt_indicator(
         ar = 1/4,
         include_trends = TRUE
-      ) +
-      ggplot2::ggtitle(paste0("Monthly bottom temperature in stock area - ", month.abb[i]))
+      ) |>
+      plotly::ggplotly()
+    # +
+    #   ggplot2::ggtitle(paste0("Monthly bottom temperature in stock area - ", month.abb[i]))  
   )
 }
 ```
@@ -144,12 +148,50 @@ for(i in 1:12) {
       NEesp2::plt_indicator(
         ar = 1/4,
         include_trends = TRUE
-      ) +
-      ggplot2::ggtitle(paste0("Monthly bottom salinity in stock area - ", month.abb[i]))
+      ) |>
+      plotly::ggplotly()
+    # +
+    #   ggplot2::ggtitle(paste0("Monthly bottom salinity in stock area - ", month.abb[i])) 
   )
 }
 ```
 
 ```{r, eval = !file.exists(url3)}
 cat("Bottom salinity for this species hasn't been calculated yet.")
+```
+
+### Monthly mean chlorophyll in stock area
+
+
+```{r chl}
+ url4 <- here::here("data-raw/2026/SEASCALLOP_chl.csv")
+```
+
+```{r, eval = file.exists(url4), results = "asis"}
+cat("Get the data used to make the chlorophyll indicator plots [here](", url4, ").")
+```
+
+```{r, eval = file.exists(url4)}
+chl <- read.csv(url4) |>
+  dplyr::group_by(AREA, MONTH, YEAR, INDICATOR_NAME, INDICATOR_UNITS) |>
+  dplyr::summarise(DATA_VALUE = mean(DATA_VALUE, na.rm = TRUE), .groups = "drop") |>
+  dplyr::mutate(INDICATOR_NAME = "monthly_chl")
+
+for(i in 1:12) {
+  print(
+    chl |>
+      dplyr::filter(MONTH == i) |>
+      NEesp2::plt_indicator(
+        ar = 1/4,
+        include_trends = TRUE
+      ) |>
+      plotly::ggplotly()
+    # +
+    #   ggplot2::ggtitle(paste0("Monthly bottom salinity in stock area - ", month.abb[i])) 
+  )
+}
+```
+
+```{r, eval = !file.exists(url4)}
+cat("Monthly mean chlorophyll for this species hasn't been calculated yet.")
 ```

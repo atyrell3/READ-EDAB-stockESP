@@ -4,15 +4,83 @@ species_shp <- create_shp(
   orig_shp = shp
 )
 
+# 
+# bt <- NEesp2::create_spatial_indicator(
+#   indicator_name = "bottomT",
+#   units = "degC",
+#   data.in = hubert,
+#   file.time = 'annual',
+#   output.files = c(here::here('data-raw', '{{ species }}_bottomT.nc')),
+#   shp.file = species_shp,
+#   var.name = "sea_water_temperature_at_sea_floor",
+#   area.names = "stock_area",
+#   statistic = 'mean',
+#   agg.time = 'days',
+#   tz = NA,
+#   touches = TRUE,
+#   write.out = F
+# )
+# 
+# write.csv(
+#   bt,
+#   here::here('data-raw/2026', '{{ species }}_hubert_bottomT.csv'),
+#   row.names = FALSE
+# )
+# 
+# # glorys ----
+# glorys_species <- NEesp2::create_spatial_indicator(
+#   indicator_name = "bottomT",
+#   units = "degC",
+#   data.in = glorys,
+#   file.time = 'annual',
+#   output.files = c(here::here('data-raw', '{{ species }}_glorys.nc')),
+#   shp.file = species_shp,
+#   var.name = "bottomT",
+#   area.names = "stock_area",
+#   statistic = 'mean',
+#   agg.time = 'days',
+#   tz = NA,
+#   touches = TRUE,
+#   write.out = F
+# )
+# write.csv(
+#   glorys_species,
+#   here::here('data-raw/2026', '{{ species }}_glorys_bottomT.csv'),
+#   row.names = FALSE
+# )
+# 
+# # glorys bottom salinity ----
+# glorys_species_sal <- NEesp2::create_spatial_indicator(
+#   indicator_name = "bottomS",
+#   units = "1e-3",
+#   data.in = glorys_salinity,
+#   file.time = 'annual',
+#   output.files = c(here::here('data-raw', '{{ species }}_glorys_bottomS.nc')),
+#   shp.file = species_shp,
+#   var.name = "so",
+#   area.names = "stock_area",
+#   statistic = 'mean',
+#   agg.time = 'days',
+#   tz = NA,
+#   touches = TRUE,
+#   write.out = F
+# )
+# 
+# write.csv(
+#   glorys_species_sal,
+#   here::here('data-raw/2026', '{{ species }}_glorys_bottomS.csv'),
+#   row.names = FALSE
+# )
 
-bt <- NEesp2::create_spatial_indicator(
-  indicator_name = "bottomT",
-  units = "degC",
-  data.in = hubert,
+# CHLOROPHYLL
+occci_chl <- create_spatial_indicator(
+  indicator_name = "chlor_a",
+  units = "m^-3",
+  data.in = chl,
   file.time = 'annual',
-  output.files = c(here::here('data-raw', '{{ species }}_bottomT.nc')),
+  output.files = c(here::here('data-raw', '{{ species }}_chl.nc')),
   shp.file = species_shp,
-  var.name = "sea_water_temperature_at_sea_floor",
+  var.name = "chlor_a",
   area.names = "stock_area",
   statistic = 'mean',
   agg.time = 'days',
@@ -22,53 +90,8 @@ bt <- NEesp2::create_spatial_indicator(
 )
 
 write.csv(
-  bt,
-  here::here('data-raw/2026', '{{ species }}_hubert_bottomT.csv'),
-  row.names = FALSE
-)
-
-# glorys ----
-glorys_species <- NEesp2::create_spatial_indicator(
-  indicator_name = "bottomT",
-  units = "degC",
-  data.in = glorys,
-  file.time = 'annual',
-  output.files = c(here::here('data-raw', '{{ species }}_glorys.nc')),
-  shp.file = species_shp,
-  var.name = "bottomT",
-  area.names = "stock_area",
-  statistic = 'mean',
-  agg.time = 'days',
-  tz = NA,
-  touches = TRUE,
-  write.out = F
-)
-write.csv(
-  glorys_species,
-  here::here('data-raw/2026', '{{ species }}_glorys_bottomT.csv'),
-  row.names = FALSE
-)
-
-# glorys bottom salinity ----
-glorys_species_sal <- create_spatial_indicator(
-  indicator_name = "bottomS",
-  units = "1e-3",
-  data.in = glorys_salinity,
-  file.time = 'annual',
-  output.files = c(here::here('data-raw', '{{ species }}_glorys_bottomS.nc')),
-  shp.file = species_shp,
-  var.name = "so",
-  area.names = "stock_area",
-  statistic = 'mean',
-  agg.time = 'days',
-  tz = NA,
-  touches = TRUE,
-  write.out = F
-)
-
-write.csv(
-  glorys_species_sal,
-  here::here('data-raw/2026', '{{ species }}_glorys_bottomS.csv'),
+  occci_chl,
+  here::here('data-raw/2026', '{{ species }}_chl.csv'),
   row.names = FALSE
 )
 

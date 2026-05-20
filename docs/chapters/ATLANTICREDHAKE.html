@@ -70,6 +70,24 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="../site_libs/plotly-binding-4.12.0/plotly.js"></script>
+
+<script src="../site_libs/typedarray-0.1/typedarray.min.js"></script>
+
+<script src="../site_libs/jquery-3.5.1/jquery.min.js"></script>
+
+<link href="../site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="../site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+
+<link href="../site_libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
+
+<script src="../site_libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
+
 
 
 </head>
@@ -199,6 +217,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#monthly-bottom-temperature-in-stock-area" id="toc-monthly-bottom-temperature-in-stock-area" class="nav-link" data-scroll-target="#monthly-bottom-temperature-in-stock-area"><span class="header-section-number">5.3.1</span> Monthly bottom temperature in stock area</a></li>
   <li><a href="#monthly-bottom-salinity-in-stock-area" id="toc-monthly-bottom-salinity-in-stock-area" class="nav-link" data-scroll-target="#monthly-bottom-salinity-in-stock-area"><span class="header-section-number">5.3.2</span> Monthly bottom salinity in stock area</a></li>
+  <li><a href="#monthly-mean-chlorophyll-in-stock-area" id="toc-monthly-mean-chlorophyll-in-stock-area" class="nav-link" data-scroll-target="#monthly-mean-chlorophyll-in-stock-area"><span class="header-section-number">5.3.3</span> Monthly mean chlorophyll in stock area</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -239,60 +258,99 @@ ul.task-list li input[type="checkbox"] {
 <section id="average-price-per-pound" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="average-price-per-pound"><span class="header-section-number">5.2.1</span> Average price per pound</h3>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-1ed41f4ce6b738c2351e" style="width:100%;height:243px;"></div>
+<script type="application/json" data-for="htmlwidget-1ed41f4ce6b738c2351e">{"x":{"data":[{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989,0.77282491623963989],"text":"mean + sd: 0.7728249","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631,0.60307522018243631],"text":"mean - sd: 0.6030752","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381,0.6879500682110381],"text":"mean: 0.6879501","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"dot"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],"y":[0.73261124874903205,0.65873655706333301,0.67384108193066905,0.67495222009949996,0.66920127608697899,0.60562772881515903,0.69766493524036099,0.65676338213079899,0.72605601255297703,0.88913370482374698,0.78823662429686003,0.72771538599730501,0.66640991897565005,0.60840291157721005,0.71814840154076598,0.74861316777418596,0.72327697501789701,0.76731135457133803,0.71851402925539398,0.77802738519153603,0.76010039458415501,0.71818280352546204,0.59554082009703901,0.60893973584601202,0.602761203300334,0.68389803591824605,0.81143933749172203,0.57159262959045598,0.46484903035749198,0.59195375392952698],"text":["YEAR: 1996<br />DATA_VALUE: 0.7326112","YEAR: 1997<br />DATA_VALUE: 0.6587366","YEAR: 1998<br />DATA_VALUE: 0.6738411","YEAR: 1999<br />DATA_VALUE: 0.6749522","YEAR: 2000<br />DATA_VALUE: 0.6692013","YEAR: 2001<br />DATA_VALUE: 0.6056277","YEAR: 2002<br />DATA_VALUE: 0.6976649","YEAR: 2003<br />DATA_VALUE: 0.6567634","YEAR: 2004<br />DATA_VALUE: 0.7260560","YEAR: 2005<br />DATA_VALUE: 0.8891337","YEAR: 2006<br />DATA_VALUE: 0.7882366","YEAR: 2007<br />DATA_VALUE: 0.7277154","YEAR: 2008<br />DATA_VALUE: 0.6664099","YEAR: 2009<br />DATA_VALUE: 0.6084029","YEAR: 2010<br />DATA_VALUE: 0.7181484","YEAR: 2011<br />DATA_VALUE: 0.7486132","YEAR: 2012<br />DATA_VALUE: 0.7232770","YEAR: 2013<br />DATA_VALUE: 0.7673114","YEAR: 2014<br />DATA_VALUE: 0.7185140","YEAR: 2015<br />DATA_VALUE: 0.7780274","YEAR: 2016<br />DATA_VALUE: 0.7601004","YEAR: 2017<br />DATA_VALUE: 0.7181828","YEAR: 2018<br />DATA_VALUE: 0.5955408","YEAR: 2019<br />DATA_VALUE: 0.6089397","YEAR: 2020<br />DATA_VALUE: 0.6027612","YEAR: 2021<br />DATA_VALUE: 0.6838980","YEAR: 2022<br />DATA_VALUE: 0.8114393","YEAR: 2023<br />DATA_VALUE: 0.5715926","YEAR: 2024<br />DATA_VALUE: 0.4648490","YEAR: 2025<br />DATA_VALUE: 0.5919538"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)","dash":"solid"},"frame":null},{"visible":false,"showlegend":false,"xaxis":null,"yaxis":null,"hoverinfo":"text","mode":"","frame":null}],"layout":{"margin":{"t":26.626816106268159,"r":10.62681610626816,"b":32.943129929431301,"l":41.44458281444583},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"transparent","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1994.55,2026.45],"tickmode":"array","ticktext":["2000","2010","2020"],"tickvals":[2000,2010,2020],"categoryorder":"array","categoryarray":["2000","2010","2020"],"nticks":null,"ticks":"outside","tickcolor":"rgba(0,0,0,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.96607419147892382,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.44363479663417921,0.91034793854705975],"tickmode":"array","ticktext":["0.5","0.6","0.7","0.8","0.9"],"tickvals":[0.5,0.60000000000000009,0.70000000000000007,0.80000000000000004,0.90000000000000002],"categoryorder":"array","categoryarray":["0.5","0.6","0.7","0.8","0.9"],"nticks":null,"ticks":"outside","tickcolor":"rgba(0,0,0,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.96607419147892382,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.7487473156764497,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"14ac41d45e80":{"yintercept":{},"type":"scatter"},"14ac62a245ba":{"yintercept":{}},"14ac142e2f0c":{"yintercept":{}},"14ac43733028":{"x":{},"y":{}},"14ac217747b3":{"x":{},"y":{}},"14ac45381ff1":{"x":{},"y":{}},"14ac6a1f3ff5":{"x":{},"y":{}}},"cur_data":"14ac41d45e80","visdat":{"14ac41d45e80":["function (y) ","x"],"14ac62a245ba":["function (y) ","x"],"14ac142e2f0c":["function (y) ","x"],"14ac43733028":["function (y) ","x"],"14ac217747b3":["function (y) ","x"],"14ac45381ff1":["function (y) ","x"],"14ac6a1f3ff5":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
 <section id="total-commercial-landings-pounds" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="total-commercial-landings-pounds"><span class="header-section-number">5.2.2</span> Total commercial landings (pounds)</h3>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-4fa9d5f79428004ec23b" style="width:100%;height:243px;"></div>
+<script type="application/json" data-for="htmlwidget-4fa9d5f79428004ec23b">{"x":{"data":[{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117,2469618.720503117],"text":"mean + sd: 2469619","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496,558537.7461635496],"text":"mean - sd: 558537.7","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334,1514078.2333333334],"text":"mean: 1514078","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"dot"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],"y":[2418111,2915260,2940152,3449059,3563858,3703134,2039513,1849783,1551012,1000291,1057643,1198170,1300215,1347245,1359681,1314607,1828490,1156355,1388458,1037887,1090558,868021,1081548,989001,722722,488087,373001,447213,525470,417802],"text":["YEAR: 1996<br />DATA_VALUE: 2418111","YEAR: 1997<br />DATA_VALUE: 2915260","YEAR: 1998<br />DATA_VALUE: 2940152","YEAR: 1999<br />DATA_VALUE: 3449059","YEAR: 2000<br />DATA_VALUE: 3563858","YEAR: 2001<br />DATA_VALUE: 3703134","YEAR: 2002<br />DATA_VALUE: 2039513","YEAR: 2003<br />DATA_VALUE: 1849783","YEAR: 2004<br />DATA_VALUE: 1551012","YEAR: 2005<br />DATA_VALUE: 1000291","YEAR: 2006<br />DATA_VALUE: 1057643","YEAR: 2007<br />DATA_VALUE: 1198170","YEAR: 2008<br />DATA_VALUE: 1300215","YEAR: 2009<br />DATA_VALUE: 1347245","YEAR: 2010<br />DATA_VALUE: 1359681","YEAR: 2011<br />DATA_VALUE: 1314607","YEAR: 2012<br />DATA_VALUE: 1828490","YEAR: 2013<br />DATA_VALUE: 1156355","YEAR: 2014<br />DATA_VALUE: 1388458","YEAR: 2015<br />DATA_VALUE: 1037887","YEAR: 2016<br />DATA_VALUE: 1090558","YEAR: 2017<br />DATA_VALUE:  868021","YEAR: 2018<br />DATA_VALUE: 1081548","YEAR: 2019<br />DATA_VALUE:  989001","YEAR: 2020<br />DATA_VALUE:  722722","YEAR: 2021<br />DATA_VALUE:  488087","YEAR: 2022<br />DATA_VALUE:  373001","YEAR: 2023<br />DATA_VALUE:  447213","YEAR: 2024<br />DATA_VALUE:  525470","YEAR: 2025<br />DATA_VALUE:  417802"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)","dash":"solid"},"frame":null},{"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","mode":"","frame":null},{"visible":false,"showlegend":false,"xaxis":null,"yaxis":null,"hoverinfo":"text","mode":"","frame":null}],"layout":{"margin":{"t":26.626816106268159,"r":10.62681610626816,"b":32.943129929431301,"l":92.453300124533001},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"transparent","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1994.55,2026.45],"tickmode":"array","ticktext":["2000","2010","2020"],"tickvals":[2000,2010,2020],"categoryorder":"array","categoryarray":["2000","2010","2020"],"nticks":null,"ticks":"outside","tickcolor":"rgba(0,0,0,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.96607419147892382,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[157691.44163487107,3871964.5980173871],"tickmode":"array","ticktext":["1,000,000","2,000,000","3,000,000"],"tickvals":[1000000,2000000,3000000],"categoryorder":"array","categoryarray":["1,000,000","2,000,000","3,000,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(0,0,0,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.96607419147892382,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.7487473156764497,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"14ac19bf3c5b":{"yintercept":{},"type":"scatter"},"14ac665a7854":{"yintercept":{}},"14ac22e163b":{"yintercept":{}},"14ac32784d06":{"x":{},"y":{}},"14ac63b7bf1":{"x":{},"y":{}},"14ac42fd10b9":{"x":{},"y":{}},"14ac2c9740bb":{"x":{},"y":{}}},"cur_data":"14ac19bf3c5b","visdat":{"14ac19bf3c5b":["function (y) ","x"],"14ac665a7854":["function (y) ","x"],"14ac22e163b":["function (y) ","x"],"14ac32784d06":["function (y) ","x"],"14ac63b7bf1":["function (y) ","x"],"14ac42fd10b9":["function (y) ","x"],"14ac2c9740bb":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
 <section id="total-commercial-revenue" class="level3" data-number="5.2.3">
 <h3 data-number="5.2.3" class="anchored" data-anchor-id="total-commercial-revenue"><span class="header-section-number">5.2.3</span> Total commercial revenue</h3>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-9f9a0e6fa15510eac24f" style="width:100%;height:243px;"></div>
+<script type="application/json" data-for="htmlwidget-9f9a0e6fa15510eac24f">{"x":{"data":[{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937,1268649.4515530937],"text":"mean + sd: 1268649","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921,389952.73760752921],"text":"mean - sd: 389952.7","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144,829301.09458031144],"text":"mean: 829301.1","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"dot"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],"y":[1330913.5873092699,1470550.2287667501,1412993.0235898199,1681788.8322106099,1644918.7884017699,1591299.7016003199,1171560.15586514,980851.65971428598,940711.61902112095,804828.75282951805,647895.06166363298,656822.833646029,651999.426183876,673852.57442267495,738659.50581842905,874008.88023349899,1344154.48965488,788949.94223727705,756578.91880062595,666200.69738478097,682293.55535536096,599199.06230311503,525277.89761262306,519032.72289492702,382454.34912966698,304053.76144048898,304841.11552215001,254350.754727002,231321.93906970101,246669],"text":["YEAR: 1996<br />DATA_VALUE: 1330913.6","YEAR: 1997<br />DATA_VALUE: 1470550.2","YEAR: 1998<br />DATA_VALUE: 1412993.0","YEAR: 1999<br />DATA_VALUE: 1681788.8","YEAR: 2000<br />DATA_VALUE: 1644918.8","YEAR: 2001<br />DATA_VALUE: 1591299.7","YEAR: 2002<br />DATA_VALUE: 1171560.2","YEAR: 2003<br />DATA_VALUE:  980851.7","YEAR: 2004<br />DATA_VALUE:  940711.6","YEAR: 2005<br />DATA_VALUE:  804828.8","YEAR: 2006<br />DATA_VALUE:  647895.1","YEAR: 2007<br />DATA_VALUE:  656822.8","YEAR: 2008<br />DATA_VALUE:  651999.4","YEAR: 2009<br />DATA_VALUE:  673852.6","YEAR: 2010<br />DATA_VALUE:  738659.5","YEAR: 2011<br />DATA_VALUE:  874008.9","YEAR: 2012<br />DATA_VALUE: 1344154.5","YEAR: 2013<br />DATA_VALUE:  788949.9","YEAR: 2014<br />DATA_VALUE:  756578.9","YEAR: 2015<br />DATA_VALUE:  666200.7","YEAR: 2016<br />DATA_VALUE:  682293.6","YEAR: 2017<br />DATA_VALUE:  599199.1","YEAR: 2018<br />DATA_VALUE:  525277.9","YEAR: 2019<br />DATA_VALUE:  519032.7","YEAR: 2020<br />DATA_VALUE:  382454.3","YEAR: 2021<br />DATA_VALUE:  304053.8","YEAR: 2022<br />DATA_VALUE:  304841.1","YEAR: 2023<br />DATA_VALUE:  254350.8","YEAR: 2024<br />DATA_VALUE:  231321.9","YEAR: 2025<br />DATA_VALUE:  246669.0"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)","dash":"solid"},"frame":null},{"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","mode":"","frame":null},{"visible":false,"showlegend":false,"xaxis":null,"yaxis":null,"hoverinfo":"text","mode":"","frame":null}],"layout":{"margin":{"t":26.626816106268159,"r":10.62681610626816,"b":32.943129929431301,"l":92.453300124533001},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"transparent","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1994.55,2026.45],"tickmode":"array","ticktext":["2000","2010","2020"],"tickvals":[2000,2010,2020],"categoryorder":"array","categoryarray":["2000","2010","2020"],"nticks":null,"ticks":"outside","tickcolor":"rgba(0,0,0,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.96607419147892382,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[153375.97643284453,1754570.3967714559],"tickmode":"array","ticktext":["500,000","1,000,000","1,500,000"],"tickvals":[500000,1000000,1500000],"categoryorder":"array","categoryarray":["500,000","1,000,000","1,500,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(0,0,0,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.96607419147892382,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.7487473156764497,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"14ac18cd4b0c":{"yintercept":{},"type":"scatter"},"14ac25db49b7":{"yintercept":{}},"14ac667c4791":{"yintercept":{}},"14ac4cd5176d":{"x":{},"y":{}},"14ac6cab414e":{"x":{},"y":{}},"14ac2bfd411d":{"x":{},"y":{}},"14ac156b63e2":{"x":{},"y":{}}},"cur_data":"14ac18cd4b0c","visdat":{"14ac18cd4b0c":["function (y) ","x"],"14ac25db49b7":["function (y) ","x"],"14ac667c4791":["function (y) ","x"],"14ac4cd5176d":["function (y) ","x"],"14ac6cab414e":["function (y) ","x"],"14ac2bfd411d":["function (y) ","x"],"14ac156b63e2":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
 <section id="number-of-commercial-vessels" class="level3" data-number="5.2.4">
 <h3 data-number="5.2.4" class="anchored" data-anchor-id="number-of-commercial-vessels"><span class="header-section-number">5.2.4</span> Number of commercial vessels</h3>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomLM() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-7f72f30216c5803ef7ac" style="width:100%;height:243px;"></div>
+<script type="application/json" data-for="htmlwidget-7f72f30216c5803ef7ac">{"x":{"data":[{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234,356.68060330342234],"text":"mean + sd: 356.6806","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771,139.91939669657771],"text":"mean - sd: 139.9194","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001,248.30000000000001],"text":"mean: 248.3","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"dot"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],"y":[391,412,458,506,450,423,374,314,244,180,186,194,201,187,194,195,208,207,205,175,199,198,198,189,168,170,160,158,155,150],"text":["YEAR: 1996<br />DATA_VALUE: 391","YEAR: 1997<br />DATA_VALUE: 412","YEAR: 1998<br />DATA_VALUE: 458","YEAR: 1999<br />DATA_VALUE: 506","YEAR: 2000<br />DATA_VALUE: 450","YEAR: 2001<br />DATA_VALUE: 423","YEAR: 2002<br />DATA_VALUE: 374","YEAR: 2003<br />DATA_VALUE: 314","YEAR: 2004<br />DATA_VALUE: 244","YEAR: 2005<br />DATA_VALUE: 180","YEAR: 2006<br />DATA_VALUE: 186","YEAR: 2007<br />DATA_VALUE: 194","YEAR: 2008<br />DATA_VALUE: 201","YEAR: 2009<br />DATA_VALUE: 187","YEAR: 2010<br />DATA_VALUE: 194","YEAR: 2011<br />DATA_VALUE: 195","YEAR: 2012<br />DATA_VALUE: 208","YEAR: 2013<br />DATA_VALUE: 207","YEAR: 2014<br />DATA_VALUE: 205","YEAR: 2015<br />DATA_VALUE: 175","YEAR: 2016<br />DATA_VALUE: 199","YEAR: 2017<br />DATA_VALUE: 198","YEAR: 2018<br />DATA_VALUE: 198","YEAR: 2019<br />DATA_VALUE: 189","YEAR: 2020<br />DATA_VALUE: 168","YEAR: 2021<br />DATA_VALUE: 170","YEAR: 2022<br />DATA_VALUE: 160","YEAR: 2023<br />DATA_VALUE: 158","YEAR: 2024<br />DATA_VALUE: 155","YEAR: 2025<br />DATA_VALUE: 150"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)","dash":"solid"},"frame":null},{"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","mode":"","frame":null}],"layout":{"margin":{"t":26.626816106268159,"r":10.62681610626816,"b":32.943129929431301,"l":41.44458281444583},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"transparent","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1994.55,2026.45],"tickmode":"array","ticktext":["2000","2010","2020"],"tickvals":[2000,2010,2020],"categoryorder":"array","categoryarray":["2000","2010","2020"],"nticks":null,"ticks":"outside","tickcolor":"rgba(0,0,0,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.96607419147892382,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[121.61536653140659,524.30403016517107],"tickmode":"array","ticktext":["200","300","400","500"],"tickvals":[200,300,400,500],"categoryorder":"array","categoryarray":["200","300","400","500"],"nticks":null,"ticks":"outside","tickcolor":"rgba(0,0,0,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.96607419147892382,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.7487473156764497,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"14ac4f627e5":{"yintercept":{},"type":"scatter"},"14ac25aa1edd":{"yintercept":{}},"14ac26e562b":{"yintercept":{}},"14ac5bd113bc":{"x":{},"y":{}},"14ac6f167aa2":{"x":{},"y":{}},"14ac4a626263":{"x":{},"y":{}},"14ac294c79be":{"x":{},"y":{}}},"cur_data":"14ac4f627e5","visdat":{"14ac4f627e5":["function (y) ","x"],"14ac25aa1edd":["function (y) ","x"],"14ac26e562b":["function (y) ","x"],"14ac5bd113bc":["function (y) ","x"],"14ac6f167aa2":["function (y) ","x"],"14ac4a626263":["function (y) ","x"],"14ac294c79be":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
 <section id="average-revenue-per-vessel-usd2024" class="level3" data-number="5.2.5">
 <h3 data-number="5.2.5" class="anchored" data-anchor-id="average-revenue-per-vessel-usd2024"><span class="header-section-number">5.2.5</span> Average revenue per vessel ($USD2024)</h3>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-89980a7f1868a1228964" style="width:100%;height:243px;"></div>
+<script type="application/json" data-for="htmlwidget-89980a7f1868a1228964">{"x":{"data":[{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115,4266.56375007115],"text":"mean + sd: 4266.564","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022,2252.4676068994022],"text":"mean - sd: 2252.468","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,1994.55,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45,2026.45],"y":[3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761,3259.5156784852761],"text":"mean: 3259.516","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,100,0,1)","dash":"dot"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],"y":[3403.8710672871398,3569.2966717639501,3085.1376060912999,3323.6933442897498,3655.3750853372699,3761.93782884237,3132.5137857356599,3123.7314003639699,3855.3754877914798,4471.2708490528803,3483.3067831378098,3385.6847095156099,3243.7782397207702,3603.4897027950501,3807.5232258681899,4482.09682171025,6462.2812002638302,3811.35237795786,3690.62887219818,3806.86112791304,3428.61083093146,3026.2578904197699,2652.9186748112302,2746.2048830419399,2276.5139829146901,1788.5515378852299,1929.3741488743699,1640.97261114195,1492.3996069012901,1644.46],"text":["YEAR: 1996<br />DATA_VALUE: 3403.871","YEAR: 1997<br />DATA_VALUE: 3569.297","YEAR: 1998<br />DATA_VALUE: 3085.138","YEAR: 1999<br />DATA_VALUE: 3323.693","YEAR: 2000<br />DATA_VALUE: 3655.375","YEAR: 2001<br />DATA_VALUE: 3761.938","YEAR: 2002<br />DATA_VALUE: 3132.514","YEAR: 2003<br />DATA_VALUE: 3123.731","YEAR: 2004<br />DATA_VALUE: 3855.375","YEAR: 2005<br />DATA_VALUE: 4471.271","YEAR: 2006<br />DATA_VALUE: 3483.307","YEAR: 2007<br />DATA_VALUE: 3385.685","YEAR: 2008<br />DATA_VALUE: 3243.778","YEAR: 2009<br />DATA_VALUE: 3603.490","YEAR: 2010<br />DATA_VALUE: 3807.523","YEAR: 2011<br />DATA_VALUE: 4482.097","YEAR: 2012<br />DATA_VALUE: 6462.281","YEAR: 2013<br />DATA_VALUE: 3811.352","YEAR: 2014<br />DATA_VALUE: 3690.629","YEAR: 2015<br />DATA_VALUE: 3806.861","YEAR: 2016<br />DATA_VALUE: 3428.611","YEAR: 2017<br />DATA_VALUE: 3026.258","YEAR: 2018<br />DATA_VALUE: 2652.919","YEAR: 2019<br />DATA_VALUE: 2746.205","YEAR: 2020<br />DATA_VALUE: 2276.514","YEAR: 2021<br />DATA_VALUE: 1788.552","YEAR: 2022<br />DATA_VALUE: 1929.374","YEAR: 2023<br />DATA_VALUE: 1640.973","YEAR: 2024<br />DATA_VALUE: 1492.400","YEAR: 2025<br />DATA_VALUE: 1644.460"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)","dash":"solid"},"frame":null},{"visible":false,"showlegend":false,"xaxis":null,"yaxis":null,"hoverinfo":"text","mode":"","frame":null}],"layout":{"margin":{"t":26.626816106268159,"r":10.62681610626816,"b":32.943129929431301,"l":58.44748858447489},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"transparent","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1994.55,2026.45],"tickmode":"array","ticktext":["2000","2010","2020"],"tickvals":[2000,2010,2020],"categoryorder":"array","categoryarray":["2000","2010","2020"],"nticks":null,"ticks":"outside","tickcolor":"rgba(0,0,0,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.96607419147892382,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1243.905527233163,6710.7752799319569],"tickmode":"array","ticktext":["2,000","3,000","4,000","5,000","6,000"],"tickvals":[2000,3000,4000,5000,6000],"categoryorder":"array","categoryarray":["2,000","3,000","4,000","5,000","6,000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(0,0,0,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.96607419147892382,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.7487473156764497,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"14ac1c2b6e71":{"yintercept":{},"type":"scatter"},"14ac746f6ff5":{"yintercept":{}},"14ac9163e0c":{"yintercept":{}},"14ac73cc1394":{"x":{},"y":{}},"14ac7456482f":{"x":{},"y":{}},"14ac6f759a":{"x":{},"y":{}},"14ac5af1209c":{"x":{},"y":{}}},"cur_data":"14ac1c2b6e71","visdat":{"14ac1c2b6e71":["function (y) ","x"],"14ac746f6ff5":["function (y) ","x"],"14ac9163e0c":["function (y) ","x"],"14ac73cc1394":["function (y) ","x"],"14ac7456482f":["function (y) ","x"],"14ac6f759a":["function (y) ","x"],"14ac5af1209c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -303,89 +361,149 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="5.3.1" class="anchored" data-anchor-id="monthly-bottom-temperature-in-stock-area"><span class="header-section-number">5.3.1</span> Monthly bottom temperature in stock area</h3>
 <p>Get the data used to make the bottom temperature indicator plots <a href="C:/Users/stephanie.owen/Documents/READ-EDAB-stockESP/data-raw/2026/ATLANTICREDHAKE_hubert_bottomT.csv">here (pre-2021)</a> and <a href="C:/Users/stephanie.owen/Documents/READ-EDAB-stockESP/data-raw/2026/ATLANTICREDHAKE_glorys_bottomT.csv">here (2021 and later)</a>.</p>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-10-2.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-10-3.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-10-4.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-10-5.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-10-6.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-10-7.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-10-8.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-10-9.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-10-10.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-10-11.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-10-12.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
 </div>
 </section>
@@ -393,89 +511,187 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="monthly-bottom-salinity-in-stock-area"><span class="header-section-number">5.3.2</span> Monthly bottom salinity in stock area</h3>
 <p>Get the data used to make the bottom salinity indicator plots <a href="C:/Users/stephanie.owen/Documents/READ-EDAB-stockESP/data-raw/2026/ATLANTICREDHAKE_glorys_bottomS.csv">here</a>.</p>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-13-2.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+</section>
+<section id="monthly-mean-chlorophyll-in-stock-area" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="monthly-mean-chlorophyll-in-stock-area"><span class="header-section-number">5.3.3</span> Monthly mean chlorophyll in stock area</h3>
+<p>Get the data used to make the chlorophyll indicator plots <a href="C:/Users/stephanie.owen/Documents/READ-EDAB-stockESP/data-raw/2026/ATLANTICREDHAKE_chl.csv">here</a>.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>N &lt; 30</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-13-3.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>N &lt; 30</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-13-4.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues
+Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): Aspect ratios aren't yet implemented, but you can manually set a suitable height/width
+Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): Aspect ratios aren't yet implemented, but you can manually set a suitable height/width</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>N &lt; 30</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-13-5.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>N &lt; 30</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-13-6.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>N &lt; 30</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-13-7.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>N &lt; 30</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-13-8.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>N &lt; 30</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-13-9.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>N &lt; 30</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-13-10.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>N &lt; 30</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-13-11.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>N &lt; 30</code></pre>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ATLANTICREDHAKE_files/figure-html/unnamed-chunk-13-12.png" class="img-fluid figure-img" width="768"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>N &lt; 30</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width
+Warning: Aspect ratios aren't yet implemented, but you can manually set a
+suitable height/width</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>N &lt; 30</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): geom_GeomGLS() has yet to be implemented in plotly.
+  If you'd like to see this geom implemented,
+  Please open an issue with your example code at
+  https://github.com/ropensci/plotly/issues
+Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): Aspect ratios aren't yet implemented, but you can manually set a suitable height/width
+Warning in geom2trace.default(dots[[1L]][[1L]], dots[[2L]][[1L]], dots[[3L]][[1L]]): Aspect ratios aren't yet implemented, but you can manually set a suitable height/width</code></pre>
 </div>
 </div>
 
