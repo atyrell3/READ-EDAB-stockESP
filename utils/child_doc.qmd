@@ -98,7 +98,7 @@ url2 <- here::here("data-raw/2026/{{ species }}_glorys_bottomT.csv")
 cat("Get the data used to make the bottom temperature indicator plots [here (pre-2021)](", url1, ") and [here (2021 and later)](", url2, ").", sep = "")
 ```
 
-```{r, eval = file.exists(url1) & file.exists(url2)}
+```{r, eval = file.exists(url1) & file.exists(url2), results='asis'}
 bt_data <- read.csv(url1) |>
   dplyr::bind_rows(read.csv(url2)) |>
   dplyr::group_by(AREA, MONTH, YEAR, INDICATOR_NAME, INDICATOR_UNITS) |>
@@ -112,11 +112,54 @@ for(i in 1:12) {
       NEesp2::plt_indicator(
         ar = 1/4,
         include_trends = TRUE
-      ) |>
-  plotly::ggplotly() |>
-  plotly::layout(title = list(text = paste0("Monthly bottom temperature in stock area - ", month.abb[i])))  
+      ) +
+      ggplot2::ggtitle(paste0("Monthly bottom temperature in stock area - ", month.abb[i]))
   )
 }
+# 
+# for(i in 1:12) {
+#   knitr::knit_child(text = paste("```{r}\nknitr::knit_child(text =  bt_data |>
+#       plt <- dplyr::filter(MONTH ==", i,") |>
+#       NEesp2::plt_indicator(
+#         ar = 1/4,
+#         include_trends = TRUE
+#       ) |>
+#   plotly::ggplotly() |>
+#   plotly::layout(title = list(text = paste0('Monthly bottom temperature in stock area - ', month.abb[", i, "])))  
+#   \nprint(plt)\n```"), quiet = TRUE)
+# }
+
+# for(i in 1:12) {
+#   # Create the internal R code as a string first for readability
+#   child_code <- paste0(
+#     "```{r, echo=FALSE, message=FALSE}\n",
+#     "plt <- bt_data |> \n",
+#     "  dplyr::filter(MONTH == ", i, ") |> \n",
+#     "  NEesp2::plt_indicator(ar = 1/4, include_trends = TRUE) |> \n",
+#     "  plotly::ggplotly() |> \n",
+#     "  plotly::layout(title = list(text = paste0('Monthly bottom temperature in stock area - ', month.abb[", i, "]))) \n",
+#     "print(htmltools::tagList(plt)) \n",
+#     "```"
+#   )
+#   
+#   # Knit the child chunk
+#   cat(knitr::knit_child(text = child_code, quiet = TRUE))
+# }
+
+# for(i in 1:12) {
+#   print(
+#     bt_data |>
+#       dplyr::filter(MONTH == i) |>
+#       NEesp2::plt_indicator(
+#         ar = 1/4,
+#         include_trends = TRUE
+#       ) |>
+#   plotly::ggplotly() |>
+#   plotly::layout(title = list(text = paste0("Monthly bottom temperature in stock area - ", month.abb[i])))
+#   )
+# }
+
+
 ```
 
 ```{r, eval = !(file.exists(url1) & file.exists(url2))}
@@ -147,11 +190,23 @@ for(i in 1:12) {
       NEesp2::plt_indicator(
         ar = 1/4,
         include_trends = TRUE
-      ) |>
-  plotly::ggplotly() |>
-  plotly::layout(title = list(text = paste0("Monthly bottom temperature in stock area - ", month.abb[i]))) 
+      ) +
+      ggplot2::ggtitle(paste0("Monthly bottom salinity in stock area - ", month.abb[i]))
   )
 }
+
+# for(i in 1:12) {
+#   print(
+#     bs_data |>
+#       dplyr::filter(MONTH == i) |>
+#       NEesp2::plt_indicator(
+#         ar = 1/4,
+#         include_trends = TRUE
+#       ) |>
+#   plotly::ggplotly() |>
+#   plotly::layout(title = list(text = paste0("Monthly bottom temperature in stock area - ", month.abb[i])))
+#   )
+# }
 ```
 
 ```{r, eval = !file.exists(url3)}
@@ -182,11 +237,23 @@ for(i in 1:12) {
       NEesp2::plt_indicator(
         ar = 1/4,
         include_trends = TRUE
-      ) |>
-  plotly::ggplotly() |>
-  plotly::layout(title = list(text = paste0("Monthly bottom temperature in stock area - ", month.abb[i])))
+      ) +
+      ggplot2::ggtitle(paste0("Monthly mean chlorophyll in stock area - ", month.abb[i]))
   )
 }
+
+# for(i in 1:12) {
+#   print(
+#     chl |>
+#       dplyr::filter(MONTH == i) |>
+#       NEesp2::plt_indicator(
+#         ar = 1/4,
+#         include_trends = TRUE
+#       ) |>
+#   plotly::ggplotly() |>
+#   plotly::layout(title = list(text = paste0("Monthly bottom temperature in stock area - ", month.abb[i])))
+#   )
+# }
 ```
 
 ```{r, eval = !file.exists(url4)}
