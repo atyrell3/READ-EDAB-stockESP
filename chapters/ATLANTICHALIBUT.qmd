@@ -113,9 +113,8 @@ for(i in 1:12) {
         ar = 1/4,
         include_trends = TRUE
       ) |>
-      plotly::ggplotly()
-    # +
-    #   ggplot2::ggtitle(paste0("Monthly bottom temperature in stock area - ", month.abb[i]))  
+  plotly::ggplotly() |>
+  plotly::layout(title = list(text = paste0("Monthly bottom temperature in stock area - ", month.abb[i])))  
   )
 }
 ```
@@ -149,9 +148,8 @@ for(i in 1:12) {
         ar = 1/4,
         include_trends = TRUE
       ) |>
-      plotly::ggplotly()
-    # +
-    #   ggplot2::ggtitle(paste0("Monthly bottom salinity in stock area - ", month.abb[i])) 
+  plotly::ggplotly() |>
+  plotly::layout(title = list(text = paste0("Monthly bottom temperature in stock area - ", month.abb[i]))) 
   )
 }
 ```
@@ -185,9 +183,8 @@ for(i in 1:12) {
         ar = 1/4,
         include_trends = TRUE
       ) |>
-      plotly::ggplotly()
-    # +
-    #   ggplot2::ggtitle(paste0("Monthly bottom salinity in stock area - ", month.abb[i])) 
+  plotly::ggplotly() |>
+  plotly::layout(title = list(text = paste0("Monthly bottom temperature in stock area - ", month.abb[i])))
   )
 }
 ```
