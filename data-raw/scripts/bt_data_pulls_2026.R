@@ -27,7 +27,9 @@ fishbot <- '//nefscdata/SOE_ESP_Data/READ-EDAB-NEesp2/data-raw/2026/fishbot_2000
 # terra::vect()
 
 ## create stock shapefile from strata provided
+### DOES THE EPU SHAPEFILE NEED TO BE NAMED SOMETHING DIFFERENT? OR IS THIS NOT NEEDED WHEN LOADING FROM ECODATA::epu_sf?
 shp <- terra::vect(here::here('data-raw/shapefiles', 'BTS_STRATA.shp'))
+shp <- terra::vect(here::here('data-raw/shapefiles', 'EPU_NOESTUARIES.shp'))
 
 input_data <- list(
   halibut = list(
@@ -234,6 +236,13 @@ input_data <- list(
     "01390",
     "01400"
   )'
+  ),
+  scallop = list(
+   species = "SEASCALLOP",
+   strat = 'c( 
+   "MAB",
+   "GB"
+   )'
   )
 )
 
@@ -247,22 +256,27 @@ create_shp <- function(strata, orig_shp = shp) {
   return(shp_out)
 }
 
-eval_spatial <- function(species, strata_nums) {
+eval_spatial <- function(species, strata_nums, by_area = c("stock", "epu")) {
   exp <- knitr::knit_expand(
     file = here::here("data-raw/scripts/spatial_code_template.R"),
     species = species,
-    strata = strata_nums
+    strata = strata_nums,
+    by = by_area
   )
-
+  
   eval(parse(text = exp))
 }
+
 
 ### run ----
 
 purrr::map(
   input_data,
-  ~ eval_spatial(species = .x$species, strata_nums = .x$strat)
+  ~ eval_spatial(species = .x$species, 
+                 strata_nums = .x$strat, 
+                 by_area = .x$by_area)
 )
+
 
 #######################################################################
 # OLD WITCH FLOUNDER TEST CODE
