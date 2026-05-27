@@ -6,7 +6,9 @@ species_names <- c(
   "LONGFINSQUID",
   "SEASCALLOP",
   "SILVER(WHITING)HAKE",
-  "WITCH(GRAY SOLE)FLOUNDER"
+  "WITCH(GRAY SOLE)FLOUNDER",
+  "AMERICANPLAICE",
+  "HADDOCK"
 )
 
 create_child <- function(species_names) {

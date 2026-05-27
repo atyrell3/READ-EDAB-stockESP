@@ -27,9 +27,7 @@ fishbot <- '//nefscdata/SOE_ESP_Data/READ-EDAB-NEesp2/data-raw/2026/fishbot_2000
 # terra::vect()
 
 ## create stock shapefile from strata provided
-### DOES THE EPU SHAPEFILE NEED TO BE NAMED SOMETHING DIFFERENT? OR IS THIS NOT NEEDED WHEN LOADING FROM ECODATA::epu_sf?
 shp <- terra::vect(here::here('data-raw/shapefiles', 'BTS_STRATA.shp'))
-shp <- terra::vect(here::here('data-raw/shapefiles', 'EPU_NOESTUARIES.shp'))
 
 input_data <- list(
   halibut = list(
