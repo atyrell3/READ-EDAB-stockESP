@@ -28,6 +28,10 @@ fishbot <- '//nefscdata/SOE_ESP_Data/READ-EDAB-NEesp2/data-raw/2026/fishbot_2000
 
 ## create stock shapefile from strata provided
 shp <- terra::vect(here::here('data-raw/shapefiles', 'BTS_STRATA.shp'))
+<<<<<<< Updated upstream
+=======
+# shp <- terra::vect(here::here('data-raw/shapefiles', 'EPU_NOESTUARIES.shp'))
+>>>>>>> Stashed changes
 
 input_data <- list(
   halibut = list(
@@ -56,7 +60,8 @@ input_data <- list(
     "01380",
     "01390",
     "01400"
-  )'
+  )',
+    by_area = "stock"
   ),
   pollock = list(
     species = "ATLANTICPOLLOCK",
@@ -84,7 +89,8 @@ input_data <- list(
     "01380",
     "01390",
     "01400"
-  )'
+  )',
+    by_area = "stock"
   ),
   red_hake = list(
     species = "ATLANTICREDHAKE",
@@ -140,7 +146,8 @@ input_data <- list(
     "01740",
     "01750",
     "01760"
-  )'
+  )',
+    by_area = "stock"
   ),
   silver_hake = list(
     species = "SILVER(WHITING)HAKE",
@@ -196,7 +203,8 @@ input_data <- list(
     "01740",
     "01750",
     "01760"
-  )'
+  )',
+    by_area = "stock"
   ),
   # witch flounder comes with a warning message: [mask] CRS do not match. Outputs a csv with 12 monthly values.
   # removed 04 and 09 strata that correspond with state surveys
@@ -233,14 +241,16 @@ input_data <- list(
     "01380",
     "01390",
     "01400"
-  )'
+  )',
+    by_area = "epu"
   ),
   scallop = list(
-   species = "SEASCALLOP",
-   strat = 'c( 
+    species = "SEASCALLOP",
+    strat = 'c( 
    "MAB",
    "GB"
-   )'
+   )',
+    by_area = "epu"
   )
 )
 
@@ -261,7 +271,7 @@ eval_spatial <- function(species, strata_nums, by_area = c("stock", "epu")) {
     strata = strata_nums,
     by = by_area
   )
-  
+
   eval(parse(text = exp))
 }
 
@@ -270,9 +280,11 @@ eval_spatial <- function(species, strata_nums, by_area = c("stock", "epu")) {
 
 purrr::map(
   input_data,
-  ~ eval_spatial(species = .x$species, 
-                 strata_nums = .x$strat, 
-                 by_area = .x$by_area)
+  ~ eval_spatial(
+    species = .x$species,
+    strata_nums = .x$strat,
+    by_area = .x$by_area
+  )
 )
 
 

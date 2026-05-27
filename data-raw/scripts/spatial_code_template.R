@@ -1,10 +1,11 @@
 # strata ----
-if({{ by_area }} == "stock") {
+
+if ("{{ by }}" == "stock") {
   species_shp <- create_shp(
     strata = {{ strata }},
     orig_shp = shp
   )
-} else if({{ by_area }} == "epu") {
+} else if ("{{ by }}" == "epu") {
   species_shp <- ecodata::epu_sf
 }
 
