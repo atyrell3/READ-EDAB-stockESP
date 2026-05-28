@@ -1,17 +1,8 @@
 # strata ----
-
-if ("{{ by }}" == "stock") {
-  species_shp <- create_shp(
-    strata = {{ strata }},
-    orig_shp = shp,
-  )
-  area <- "stock_area"
-} else if ("{{ by }}" == "epu") {
+species_shp <- create_shp(
   species_shp <- epu_shp
-  area <- "EPU"
-}
+)
 
-# hubert ----
 bt <- NEesp2::create_spatial_indicator(
   indicator_name = "bottomT",
   units = "degC",
@@ -20,7 +11,7 @@ bt <- NEesp2::create_spatial_indicator(
   output.files = c(here::here('data-raw', '{{ species }}_bottomT.nc')),
   shp.file = species_shp,
   var.name = "sea_water_temperature_at_sea_floor",
-  area.names = area,
+  area.names = "EPU",
   statistic = 'mean',
   agg.time = 'days',
   tz = NA,
@@ -43,7 +34,7 @@ glorys_species <- NEesp2::create_spatial_indicator(
   output.files = c(here::here('data-raw', '{{ species }}_glorys.nc')),
   shp.file = species_shp,
   var.name = "bottomT",
-  area.names = area,
+  area.names = "EPU",
   statistic = 'mean',
   agg.time = 'days',
   tz = NA,
@@ -101,67 +92,4 @@ write.csv(
 #   occci_chl,
 #   here::here('data-raw/2026', '{{ species }}_chl.csv'),
 #   row.names = FALSE
-# )
-
-############################################################
-# map ----
-# us <- geodata::gadm(
-#   country = "USA",
-#   level = 1,
-#   resolution = 2,
-#   path = here::here("data-raw")
-# )
-#
-# png(
-#   here::here("data-raw/2026", "{{ species }}_map.png"),
-#   width = 6,
-#   height = 6,
-#   units = "in",
-#   res = 300
-# )
-#
-# terra::plot(species_shp, col = "lightblue")
-# terra::plot(us, add = TRUE)
-#
-# dev.off()
-
-# #not recognizing var.name as "temperature"
-# fishbot_halibut <- create_spatial_indicator(
-#   indicator_name = "fishbot_bottomT",
-#   units = "degC",
-#   data.in = c(here::here('data-raw/2026', 'fishbot_2000_2026.nc')),
-#   file.time = 'annual',
-#   output.files = c(here::here('data-raw', 'fishbot_halibut_bottomT.nc')),
-#   shp.file = here::here('data-raw/shapefiles', 'BTS_STRATA.shp'),
-#   var.name = 'temperature',
-#   area.names = c(
-#     "01130",
-#     "01140",
-#     "01150",
-#     "01160",
-#     "01170",
-#     "01180",
-#     "01190",
-#     "01200",
-#     "01210",
-#     "01220",
-#     "01230",
-#     "01240",
-#     "01250",
-#     "01260",
-#     "01270",
-#     "01280",
-#     "01290",
-#     "01300",
-#     "01360",
-#     "01370",
-#     "01380",
-#     "01390",
-#     "01400"
-#   ),
-#   statistic = 'mean',
-#   agg.time = 'days',
-#   tz = NA,
-#   touches = TRUE,
-#   write.out = F
 # )

@@ -28,7 +28,7 @@ fishbot <- '//nefscdata/SOE_ESP_Data/READ-EDAB-NEesp2/data-raw/2026/fishbot_2000
 
 ## create stock shapefile from strata provided
 shp <- terra::vect(here::here('data-raw/shapefiles', 'BTS_STRATA.shp'))
-# shp <- terra::vect(here::here('data-raw/shapefiles', 'EPU_NOESTUARIES.shp'))
+epu_shp <- terra::vect(here::here('data-raw/shapefiles', 'EPU_NOESTUARIES.shp'))
 
 input_data <- list(
   # halibut = list(
