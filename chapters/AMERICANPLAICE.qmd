@@ -259,3 +259,38 @@ for(i in 1:12) {
 ```{r, eval = !file.exists(url4)}
 cat("Monthly mean chlorophyll for this species hasn't been calculated yet.")
 ```
+
+### Monthly sea surface temperature in stock area
+
+
+```{r sst}
+ url5 <- here::here("data-raw/2026/AMERICANPLAICE_sst.csv")
+```
+
+```{r, eval = file.exists(url5), results = "asis"}
+cat("Get the data used to make the sea surface temperature indicator plots [here](", url5, ").")
+```
+
+```{r, eval = file.exists(url5)}
+sst <- read.csv(url5) |>
+  dplyr::group_by(AREA, MONTH, YEAR, INDICATOR_NAME, INDICATOR_UNITS) |>
+  dplyr::summarise(DATA_VALUE = mean(DATA_VALUE, na.rm = TRUE), .groups = "drop") |>
+  dplyr::mutate(INDICATOR_NAME = "monthly_sst")
+
+for(i in 1:12) {
+  print(
+    sst |>
+      dplyr::filter(MONTH == i) |>
+      NEesp2::plt_indicator(
+        ar = 1/4,
+        include_trends = TRUE
+      ) +
+      ggplot2::ggtitle(paste0("Monthly sea surface temperature in stock area - ", month.abb[i]))
+  )
+}
+
+```
+
+```{r, eval = !file.exists(url5)}
+cat("Monthly sea surface temperature for this species hasn't been calculated yet.")
+```

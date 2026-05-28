@@ -1,7 +1,8 @@
-### FILEPATHS TO RUN LOCALLY
-glorys <- here::here('data-raw/2026/glorys_2021_2026.nc')
+# extract var.name
+glorys_salinity <- ncdf4::nc_open(here::here('data-raw/2026/glorys_salinity_1970_2026.nc')) #var.name = 'so'
 
-hubert <- here::here('data-raw/2026/duPontavice_bottom_temp_1959_2021.nc')
+# load salinity file
+glorys_salinity <- here::here('data-raw/2026/glorys_salinity_1970_2026.nc')
 
 ## create EPU shapefile from strata provided
 epu_shp <- terra::vect(here::here('data-raw/shapefiles', 'EPU_NOESTUARIES.shp'))

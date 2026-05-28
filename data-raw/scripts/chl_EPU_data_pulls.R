@@ -1,7 +1,10 @@
-### FILEPATHS TO RUN LOCALLY
-glorys <- here::here('data-raw/2026/glorys_2021_2026.nc')
+#### CHLOROPHYLL
 
-hubert <- here::here('data-raw/2026/duPontavice_bottom_temp_1959_2021.nc')
+# extract var.name
+chl_name <- ncdf4::nc_open(here::here('data-raw/2026/occci_chl_4km_1997_2026.nc')) #var.name = 'chlor_a'
+
+# load occci file
+chl <- here::here('data-raw/2026/occci_chl_4km_1997_2026.nc')
 
 ## create EPU shapefile from strata provided
 epu_shp <- terra::vect(here::here('data-raw/shapefiles', 'EPU_NOESTUARIES.shp'))
@@ -14,7 +17,11 @@ input_data <- list(
   haddock = list(
     species = "HADDOCK",
     strat = c("GOM")        # Removed single quotes
-  )
+  ),
+  mackerel = list(
+    species = "ATLANTICMACKEREL",
+    strat = c("MAB", "GB", "SS", "GOM")  # Removed single quotes
+)
 )
 
 ## functions ----
