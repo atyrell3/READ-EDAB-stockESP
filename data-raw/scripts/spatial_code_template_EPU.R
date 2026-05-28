@@ -1,7 +1,7 @@
 # strata ----
-species_shp <- create_shp(
-  species_shp <- epu_shp
-)
+
+species_shp <- epu_shp
+
 
 bt <- NEesp2::create_spatial_indicator(
   indicator_name = "bottomT",
@@ -11,7 +11,7 @@ bt <- NEesp2::create_spatial_indicator(
   output.files = c(here::here('data-raw', '{{ species }}_bottomT.nc')),
   shp.file = species_shp,
   var.name = "sea_water_temperature_at_sea_floor",
-  area.names = "EPU",
+  area.names = {{ strata }},
   statistic = 'mean',
   agg.time = 'days',
   tz = NA,
@@ -34,7 +34,7 @@ glorys_species <- NEesp2::create_spatial_indicator(
   output.files = c(here::here('data-raw', '{{ species }}_glorys.nc')),
   shp.file = species_shp,
   var.name = "bottomT",
-  area.names = "EPU",
+  area.names = {{ strata }},
   statistic = 'mean',
   agg.time = 'days',
   tz = NA,
@@ -63,15 +63,15 @@ write.csv(
 #   touches = TRUE,
 #   write.out = F
 # )
-# 
+#
 # write.csv(
 #   glorys_species_sal,
 #   here::here('data-raw/2026', '{{ species }}_glorys_bottomS.csv'),
 #   row.names = FALSE
 # )
-# 
+#
 # # chlorophyll ----
-# 
+#
 # occci_chl <- NEesp2::create_spatial_indicator(
 #   indicator_name = "chlor_a",
 #   units = "m^-3",
@@ -87,7 +87,7 @@ write.csv(
 #   touches = TRUE,
 #   write.out = F
 # )
-# 
+#
 # write.csv(
 #   occci_chl,
 #   here::here('data-raw/2026', '{{ species }}_chl.csv'),
