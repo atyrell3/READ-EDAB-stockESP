@@ -1,6 +1,14 @@
 
 # ATLANTICHALIBUT
 
+```{r setup}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
 ## Map
 
 ```{r}
@@ -88,6 +96,25 @@ NEesp2::plt_indicator(data = vesselrev,
 
 ### Monthly bottom temperature in stock area
 
+```{r fxn}
+plt_monthly <- function(data, month_num, title) {
+  plt <- data |>
+    dplyr::filter(MONTH == month_num) |>
+    NEesp2::plt_indicator(
+      ar = 1/4,
+      include_trends = TRUE
+    ) +
+    ggplot2::ggtitle(paste0(title, month.abb[month_num]))
+  
+      if( ! unique(data$AREA)[1] == "stock_area") {
+      plt <- plt +
+        ggplot2::facet_wrap(~AREA, ncol = 2)
+    }
+    
+    return(plt)
+}
+```
+
 ```{r bt-data}
 url1 <- here::here("data-raw/2026/ATLANTICHALIBUT_hubert_bottomT.csv")
 url2 <- here::here("data-raw/2026/ATLANTICHALIBUT_glorys_bottomT.csv")
@@ -106,15 +133,10 @@ bt_data <- read.csv(url1) |>
   dplyr::mutate(INDICATOR_NAME = "monthly_bottomT")
 
 for(i in 1:12) {
-  print(
-    bt_data |>
-      dplyr::filter(MONTH == i) |>
-      NEesp2::plt_indicator(
-        ar = 1/4,
-        include_trends = TRUE
-      ) +
-      ggplot2::ggtitle(paste0("Monthly bottom temperature in stock area - ", month.abb[i]))
-  )
+
+    plt_monthly(data = bt_data, month_num = i, title = "Monthly bottom temperature in stock area - ") |> 
+    print()
+  
 }
 # 
 # for(i in 1:12) {
@@ -184,15 +206,18 @@ bs_data <- read.csv(url3) |>
   dplyr::mutate(INDICATOR_NAME = "monthly_bottomS")
 
 for(i in 1:12) {
-  print(
-    bs_data |>
-      dplyr::filter(MONTH == i) |>
-      NEesp2::plt_indicator(
-        ar = 1/4,
-        include_trends = TRUE
-      ) +
-      ggplot2::ggtitle(paste0("Monthly bottom salinity in stock area - ", month.abb[i]))
-  )
+  # print(
+  #   bs_data |>
+  #     dplyr::filter(MONTH == i) |>
+  #     NEesp2::plt_indicator(
+  #       ar = 1/4,
+  #       include_trends = TRUE
+  #     ) +
+  #     ggplot2::ggtitle(paste0("Monthly bottom salinity in stock area - ", month.abb[i]))
+  # )
+  
+  plt_monthly(data = bs_data, month_num = i, title = "Monthly bottom salinity in stock area - ")|> 
+    print()
 }
 
 # for(i in 1:12) {
@@ -231,15 +256,18 @@ chl <- read.csv(url4) |>
   dplyr::mutate(INDICATOR_NAME = "monthly_chl")
 
 for(i in 1:12) {
-  print(
-    chl |>
-      dplyr::filter(MONTH == i) |>
-      NEesp2::plt_indicator(
-        ar = 1/4,
-        include_trends = TRUE
-      ) +
-      ggplot2::ggtitle(paste0("Monthly mean chlorophyll in stock area - ", month.abb[i]))
-  )
+  # print(
+  #   chl |>
+  #     dplyr::filter(MONTH == i) |>
+  #     NEesp2::plt_indicator(
+  #       ar = 1/4,
+  #       include_trends = TRUE
+  #     ) +
+  #     ggplot2::ggtitle(paste0("Monthly mean chlorophyll in stock area - ", month.abb[i]))
+  # )
+  plt_monthly(data = chl, month_num = i, title = "Monthly mean chlorophyll in stock area - ") |> 
+    print()
+  
 }
 
 # for(i in 1:12) {
@@ -278,15 +306,18 @@ sst <- read.csv(url5) |>
   dplyr::mutate(INDICATOR_NAME = "monthly_sst")
 
 for(i in 1:12) {
-  print(
-    sst |>
-      dplyr::filter(MONTH == i) |>
-      NEesp2::plt_indicator(
-        ar = 1/4,
-        include_trends = TRUE
-      ) +
-      ggplot2::ggtitle(paste0("Monthly sea surface temperature in stock area - ", month.abb[i]))
-  )
+  # print(
+  #   sst |>
+  #     dplyr::filter(MONTH == i) |>
+  #     NEesp2::plt_indicator(
+  #       ar = 1/4,
+  #       include_trends = TRUE
+  #     ) +
+  #     ggplot2::ggtitle(paste0("Monthly sea surface temperature in stock area - ", month.abb[i]))
+  # )
+  
+    plt_monthly(data = sst, month_num = i, title = "Monthly sea surface temperature in stock area - ") |> 
+    print()
 }
 
 ```
