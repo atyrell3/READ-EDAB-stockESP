@@ -4,7 +4,15 @@
 chl_name <- ncdf4::nc_open(here::here('data-raw/2026/occci_chl_4km_1997_2026.nc')) #var.name = 'chlor_a'
 
 # load occci file
-chl <- here::here('data-raw/2026/occci_chl_4km_1997_2026.nc')
+# chl <- here::here('data-raw/2026/occci_chl_4km_1997_2026.nc')
+
+# load monthly files from network drive
+nc_files <- list.files(path = here::here('data-raw/chl/'), 
+                       pattern = "\\.nc$", 
+                       full.names = TRUE)
+
+# 2. Load them all simultaneously into a single multi-layer SpatRaster
+chl <- rast(nc_files)
 
 ## create EPU shapefile from strata provided
 epu_shp <- terra::vect(here::here('data-raw/shapefiles', 'EPU_NOESTUARIES.shp'))
