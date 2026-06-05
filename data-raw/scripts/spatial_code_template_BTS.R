@@ -74,24 +74,45 @@ species_shp <- create_shp(
 # 
 # chlorophyll ----
 
-occci_chl <- NEesp2::create_spatial_indicator(
-  indicator_name = "chlor_a",
-  units = "m^-3",
-  data.in = chl,
-  file.time = 'annual',
-  output.files = c(here::here('data-raw', '{{ species }}_chl.nc')),
-  shp.file = species_shp,
-  var.name = "chlor_a",
-  area.names = "stock_area",
-  statistic = 'mean',
-  agg.time = 'days',
-  tz = NA,
-  touches = TRUE,
-  write.out = F
-)
+# occci_chl <- NEesp2::create_spatial_indicator(
+#   indicator_name = "chlor_a",
+#   units = "m^-3",
+#   data.in = chl,
+#   file.time = 'annual',
+#   output.files = c(here::here('data-raw', '{{ species }}_chl.nc')),
+#   shp.file = species_shp,
+#   var.name = "chlor_a",
+#   area.names = "stock_area",
+#   statistic = 'mean',
+#   agg.time = 'days',
+#   tz = NA,
+#   touches = TRUE,
+#   write.out = F
+# )
+# 
+# write.csv(
+#   occci_chl,
+#   here::here('data-raw/2026', '{{ species }}_chl.csv'),
+#   row.names = FALSE
+# )
+
+# SST ----
+sst <- NEesp2::create_spatial_indicator(indicator_name = "sst",
+                                         units = "degC",
+                                         data.in = sst_converted,
+                                         file.time = 'annual',
+                                         output.files = c(here::here('data-raw','{{ species }}_sst.nc')),
+                                         shp.file = species_shp,
+                                         var.name = "sst",
+                                         area.names = {{ strata }},
+                                         statistic = 'mean',
+                                         agg.time = 'days',
+                                         tz = NA,
+                                         touches = TRUE,
+                                         write.out = F)
 
 write.csv(
-  occci_chl,
-  here::here('data-raw/2026', '{{ species }}_chl.csv'),
+  sst,
+  here::here('data-raw/2026','{{ species}}_sst.csv'),
   row.names = FALSE
-)
+  )

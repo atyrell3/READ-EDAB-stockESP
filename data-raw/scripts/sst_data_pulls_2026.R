@@ -1,5 +1,5 @@
 # convert longitude from 0-360 to -180-180 for the OISST data
-sst_converted <- EDABUtilities::convert_longitude(data = here::here('data-raw/2026','oisst_monthly_1981_2026.nc'))
+sst_converted <- EDABUtilities::convert_2d_longitude_gridded(data = here::here('data-raw/inputs','oisst_monthly_1981_2026.nc'))
 
 
 ## create EPU shapefile from strata provided
