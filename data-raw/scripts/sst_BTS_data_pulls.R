@@ -1,5 +1,5 @@
 # convert longitude from 0-360 to -180-180 for the OISST data
-sst_converted <- EDABUtilities::convert_longitude(data = here::here('data-raw/2026','oisst_monthly_1981_2026.nc'))
+sst_converted <- EDABUtilities::convert_2d_longitude_gridded(data = here::here('data-raw/inputs','oisst_monthly_1981_2026.nc'))
 
 ## create stock shapefile from strata provided
 shp <- terra::vect(here::here('data-raw/shapefiles', 'BTS_STRATA.shp'))
@@ -16,7 +16,7 @@ input_data <- list(
    "01260", "01270", "01280", "01290", "01300",
    "01360", "01370", "01380", "01390", "01400",
    "03610", "03650", "03660"
-   )',
+   )'
   )
 )
 
