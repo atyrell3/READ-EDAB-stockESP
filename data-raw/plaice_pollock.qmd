@@ -1,5 +1,8 @@
 ---
 title: "American Plaice and Pollock Indicators for Fall 2026 Assessments"
+# format:
+#   html:
+#     code-fold: true
 format: pdf
 execute:
   echo: false
@@ -32,8 +35,9 @@ avgprice <- data |>
 
 NEesp2::plt_indicator(data = avgprice,
                       ar = 1/4,
-                      include_trends = TRUE)# |>
-#  plotly::ggplotly() 
+                      include_trends = TRUE) 
+# |>
+#   plotly::ggplotly()
 ```
 
 ### Total commercial landings (pounds)
@@ -44,8 +48,13 @@ landings <- data |>
 
 NEesp2::plt_indicator(data = landings,
                       ar = 1/4,
-                      include_trends = TRUE)# |>
-#  plotly::ggplotly() 
+                      include_trends = FALSE) +
+  ggplot2::geom_smooth(method = "lm", se = FALSE, color = "purple", linetype = "solid") +
+  ggplot2::geom_line() +
+  ggplot2::geom_point() 
+
+# |>
+#   plotly::ggplotly() 
 ```
 
 ### Total commercial revenue
@@ -56,7 +65,12 @@ totalrev <- data |>
 
 NEesp2::plt_indicator(data = totalrev,
                       ar = 1/4,
-                      include_trends = TRUE) # |>
+                      include_trends = FALSE)  +
+  ggplot2::geom_smooth(method = "lm", se = FALSE, color = "purple", linetype = "solid") +
+  ggplot2::geom_line() +
+  ggplot2::geom_point() 
+
+# |>
 #  plotly::ggplotly() 
 ```
 
@@ -68,7 +82,8 @@ nvessels <- data |>
 
 NEesp2::plt_indicator(data = nvessels,
                       ar = 1/4,
-                      include_trends = TRUE)# |>
+                      include_trends = TRUE) 
+# |>
 #  plotly::ggplotly() 
 ```
 
@@ -80,8 +95,9 @@ vesselrev <- data |>
 
 NEesp2::plt_indicator(data = vesselrev,
                       ar = 1/4,
-                      include_trends = TRUE)# |>
-#  plotly::ggplotly() 
+                      include_trends = TRUE)
+# |>
+#   plotly::ggplotly() 
 ```
 
 ## Ecosystem Indicators
@@ -224,8 +240,9 @@ nao_yearly <- nao |>
 
 NEesp2::plt_indicator(data = nao_yearly,
                       ar = 1/4,
-                      include_trends = TRUE)# |>
-#  plotly::ggplotly() 
+                      include_trends = TRUE) 
+# |>
+#   plotly::ggplotly() 
 ```
 
 
@@ -247,7 +264,8 @@ amo_yearly <- amo |>
 
 NEesp2::plt_indicator(data = amo_yearly,
                       ar = 1/4,
-                      include_trends = TRUE) # |>
+                      include_trends = TRUE)  
+# |>
 #  plotly::ggplotly() 
 ```
 
@@ -271,8 +289,9 @@ avgprice <- data |>
 
 NEesp2::plt_indicator(data = avgprice,
                       ar = 1/4,
-                      include_trends = TRUE)# |>
-#  plotly::ggplotly() 
+                      include_trends = TRUE) 
+# |>
+#   plotly::ggplotly() 
 ```
 
 ### Total commercial landings (pounds)
@@ -283,8 +302,9 @@ landings <- data |>
 
 NEesp2::plt_indicator(data = landings,
                       ar = 1/4,
-                      include_trends = TRUE)# |>
-#  plotly::ggplotly() 
+                      include_trends = TRUE)
+# |>
+#   plotly::ggplotly() 
 ```
 
 ### Total commercial revenue
@@ -295,7 +315,8 @@ totalrev <- data |>
 
 NEesp2::plt_indicator(data = totalrev,
                       ar = 1/4,
-                      include_trends = TRUE)# |>
+                      include_trends = TRUE)
+# |>
 #  plotly::ggplotly() 
 ```
 
@@ -307,7 +328,8 @@ nvessels <- data |>
 
 NEesp2::plt_indicator(data = nvessels,
                       ar = 1/4,
-                      include_trends = TRUE)# |>
+                      include_trends = TRUE)
+# |>
 #  plotly::ggplotly() 
 ```
 
@@ -319,8 +341,9 @@ vesselrev <- data |>
 
 NEesp2::plt_indicator(data = vesselrev,
                       ar = 1/4,
-                      include_trends = TRUE)# |>
-#  plotly::ggplotly() 
+                      include_trends = TRUE)
+# |>
+#   plotly::ggplotly() 
 ```
 
 ## Ecosystem Indicators
