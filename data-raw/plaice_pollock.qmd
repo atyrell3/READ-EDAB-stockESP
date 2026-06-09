@@ -130,21 +130,38 @@ From ESP: "Bottom temperature anomaly and SSB were both significant factors infl
 Temperatures in the stock area are near the long-term mean for all months in 2025, down from a peak in temperatures from 2020-2023 and 10+ years above the LT mean. 
 
 ```{r plaice-bt-data}
-url1 <- here::here("data-raw/2026/AMERICANPLAICE_hubert_bottomT.csv")
-url2 <- here::here("data-raw/2026/AMERICANPLAICE_glorys_bottomT.csv")
+url1 <- here::here("data-raw/outputs/AMERICANPLAICE_hubert_bottomT.csv")
+url2 <- here::here("data-raw/outputs/AMERICANPLAICE_glorys_bottomT.csv")
 ```
 
 ```{r, eval = file.exists(url1) & file.exists(url2), results='asis'}
+# 1. Prepare data
 bt_data <- read.csv(url1) |>
   dplyr::bind_rows(read.csv(url2)) |>
   dplyr::group_by(AREA, MONTH, YEAR, INDICATOR_NAME, INDICATOR_UNITS) |>
   dplyr::summarise(DATA_VALUE = mean(DATA_VALUE, na.rm = TRUE), .groups = "drop") |>
   dplyr::mutate(INDICATOR_NAME = "monthly_bottomT")
 
-for(i in 1:12) {
+month_names <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 
-    plt_monthly(data = bt_data, month_num = i, title = "Monthly bottom temperature in stock area - ") |> 
-    print()
+# 2. Loop through months and print sequentially
+for(i in 1:12) {
+  
+  # Generate the plot with standard readable text sizes
+  p <- plt_monthly(data = bt_data, month_num = i, title = month_names[i]) +
+    ggplot2::theme(
+      plot.title = ggplot2::element_text(size = 12, face = "bold", hjust = 0.5),
+      axis.text = ggplot2::element_text(size = 9)
+    )
+  
+  print(p)
+  
+  # 3. After every 3 plots, force LaTeX to jump to a new PDF page
+  if (i %% 3 == 0 && i < 12) {
+    cat("\n\\newpage\n")
+  } else {
+    cat("\n\n") # Just a spacer if it's the first plot on the page
+  }
 }
 ```
 
@@ -357,22 +374,38 @@ Small juveniles (YOY) move inshore in May and remain inshore until January, with
 Monthly BT in the stock area has a long-term increase for all months. Highest mean BT occur in Oct-Nov, around 9 deg C. 
 
 ```{r pollock-bt-data}
-url1 <- here::here("data-raw/2026/ATLANTICPOLLOCK_hubert_bottomT.csv")
-url2 <- here::here("data-raw/2026/ATLANTICPOLLOCK_glorys_bottomT.csv")
+url1 <- here::here("data-raw/outputs/ATLANTICPOLLOCK_hubert_bottomT.csv")
+url2 <- here::here("data-raw/outputs/ATLANTICPOLLOCK_glorys_bottomT.csv")
 ```
 
 ```{r, eval = file.exists(url1) & file.exists(url2), results='asis'}
+# 1. Prepare data
 bt_data <- read.csv(url1) |>
   dplyr::bind_rows(read.csv(url2)) |>
   dplyr::group_by(AREA, MONTH, YEAR, INDICATOR_NAME, INDICATOR_UNITS) |>
   dplyr::summarise(DATA_VALUE = mean(DATA_VALUE, na.rm = TRUE), .groups = "drop") |>
   dplyr::mutate(INDICATOR_NAME = "monthly_bottomT")
 
-for(i in 1:12) {
+month_names <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 
-    plt_monthly(data = bt_data, month_num = i, title = "Monthly bottom temperature in stock area - ") |> 
-    print()
+# 2. Loop through months and print sequentially
+for(i in 1:12) {
   
+  # Generate the plot with standard readable text sizes
+  p <- plt_monthly(data = bt_data, month_num = i, title = month_names[i]) +
+    ggplot2::theme(
+      plot.title = ggplot2::element_text(size = 12, face = "bold", hjust = 0.5),
+      axis.text = ggplot2::element_text(size = 9)
+    )
+  
+  print(p)
+  
+  # 3. After every 3 plots, force LaTeX to jump to a new PDF page
+  if (i %% 3 == 0 && i < 12) {
+    cat("\n\\newpage\n")
+  } else {
+    cat("\n\n") # Just a spacer if it's the first plot on the page
+  }
 }
 ```
 
