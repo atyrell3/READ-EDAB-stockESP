@@ -169,7 +169,39 @@ for(i in 1:12) {
 
 Sea surface temperature is an important consideration for plaice recruitment. The thermal limit for survival and incubation of American plaice eggs is 14C, and recent sea surface temperatures in late spring-early summer (the end of the spawning season) have exceeded that threshold. 
 
-**update with BTS SST plot**
+```{r}
+url3 <- here::here("data-raw/outputs/AMERICANPLAICE_sst.csv")
+```
+
+```{r}
+sst <- read.csv(url3) |>
+  dplyr::group_by(AREA, MONTH, YEAR, INDICATOR_NAME, INDICATOR_UNITS) |>
+  dplyr::summarise(DATA_VALUE = mean(DATA_VALUE, na.rm = TRUE), .groups = "drop") |>
+  dplyr::mutate(INDICATOR_NAME = "monthly_sst")
+
+month_names <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+# 2. Loop through months and print sequentially
+for(i in 1:12) {
+  
+  # Generate the plot with standard readable text sizes
+  p <- plt_monthly(data = sst, month_num = i, title = month_names[i]) +
+    ggplot2::theme(
+      plot.title = ggplot2::element_text(size = 12, face = "bold", hjust = 0.5),
+      axis.text = ggplot2::element_text(size = 9)
+    )
+  
+  print(p)
+  
+  # 3. After every 3 plots, force LaTeX to jump to a new PDF page
+  if (i %% 3 == 0 && i < 12) {
+    cat("\n\\newpage\n")
+  } else {
+    cat("\n\n") # Just a spacer if it's the first plot on the page
+  }
+}
+```
+
 
 ### Gulf Stream Index
 

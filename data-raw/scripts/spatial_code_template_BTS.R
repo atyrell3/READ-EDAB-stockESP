@@ -104,7 +104,7 @@ sst <- NEesp2::create_spatial_indicator(indicator_name = "sst",
                                          output.files = c(here::here('data-raw','{{ species }}_sst.nc')),
                                          shp.file = species_shp,
                                          var.name = "sst",
-                                         area.names = {{ strata }},
+                                         area.names = "stock_area",
                                          statistic = 'mean',
                                          agg.time = 'days',
                                          tz = NA,
@@ -113,6 +113,6 @@ sst <- NEesp2::create_spatial_indicator(indicator_name = "sst",
 
 write.csv(
   sst,
-  here::here('data-raw/2026','{{ species}}_sst.csv'),
+  here::here('data-raw/outputs','{{ species}}_sst.csv'),
   row.names = FALSE
   )
