@@ -1,0 +1,65 @@
+---
+title: "Stratified mean indices from StockEff"
+---
+
+```{r, setup, echo = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+) 
+```
+
+## Plot stratified mean biomass and abundance indices from StockEff
+
+```{r}
+files <- list.files(here::here("data-raw/temp"))
+metadata <- stringr::str_split_fixed(files, pattern = "_", n = 6) |>
+  tibble::as_tibble()
+```
+
+```{r}
+for(i in files) {
+  data <- read.csv(here::here("data-raw/temp", i))
+  
+    plt <- data |>
+  ggplot2::ggplot(ggplot2::aes(x = YEAR, y = INDEX)) +
+  ggplot2::geom_line() +
+  ggplot2::geom_point() +
+  ggplot2::facet_grid(cols = ggplot2::vars(INDEX_TYPE),
+  rows = ggplot2::vars(SURVEY)) +
+  ggplot2::theme_bw() +
+      ggplot2::ggtitle(i)
+  
+  print(plt)
+  
+}
+```
+
+```{r, results = "asis", eval = FALSE}
+for(i in unique(metadata$V1)) {
+  child <- '### `r i`
+  ```{r}
+  this_dat <- metadata |>
+  dplyr::filter(V1 == i)
+  for(j in 1:nrow(this_dat)) {
+  fname <- here::here("data-raw/temp", paste(this_dat[j,], collapse = "_"))
+  data <- read.csv(fname)
+  message(fname)
+  
+  plt <- data |>
+  ggplot2::ggplot(ggplot2::aes(x = YEAR, y = INDEX)) +
+  ggplot2::geom_line() +
+  ggplot2::geom_point() +
+  ggplot2::facet_grid(cols = ggplot2::vars(INDEX_TYPE),
+  rows = ggplot2::vars(SURVEY)) +
+  ggplot2::theme_bw()
+  
+  print(plt)
+  }
+  '
+  
+  res <- knitr::knit_child(text = child)
+  cat(res, sep = "\n\n")
+}
+```
