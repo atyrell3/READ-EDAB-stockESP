@@ -155,3 +155,18 @@ write.csv(
   here::here('data/yellowtail/gsi_spring.csv'),
   row.names = F
 )
+
+## Recruitment Index (StockSmart)
+
+yellowtail_rec <- stocksmart::get_latest_metrics(
+  itis = "172909",
+  metrics = "Recruitment"
+)$data |>
+  dplyr::filter(stringr::str_detect(stock_area, "Southern")) |>
+  dplyr::select(common_name, stock_area, metric, description, units, value)
+
+write.csv(
+  yellowtail_rec,
+  here::here('data/yellowtail/yellowtail_recruitment.csv'),
+  row.names = F
+)
